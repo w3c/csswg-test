@@ -10,9 +10,7 @@
 			div
 			{
 				font-size: 1.5em;
-				height: 16em;
 				line-height: 2;
-				width: 4em;
 				-webkit-writing-mode: vertical-rl;
 				writing-mode: vertical-rl;
 				white-space: nowrap;
@@ -21,17 +19,15 @@
 			{
 				-webkit-writing-mode: horizontal-tb;
 				writing-mode:  horizontal-tb;
-				height: 1em;
 				line-height: 1em;
-				margin: 0 -1em;
 				text-align: center;
 			}
 		</style>
 	</head>
 	<body lang="en">
 		<p>Test passes if the upper block is <strong>identical</strong> to the lower block, including orientation of each character.</p>
-		<div id="test" lang="ja">西暦<span class="tcy">2013</span>年<span class="tcy">12</span>月<span class="tcy">31</span>日の次の日は、<br /><span class="tcy">2014</span>年<span class="tcy">1</span>月<span class="tcy">1</span>日です。</div>
+		<div id="test" lang="ja"><span class="tcy">12</span>月<span class="tcy">31</span>日の次の日は、<br /><span class="tcy">1</span>月<span class="tcy">1</span>日です。</div>
 		<hr />
-		<div id="control" lang="ja">西暦<span class="tcy">2013</span>年<span class="tcy">12</span>月<span class="tcy">31</span>日の次の日は、<br /><span class="tcy">2014</span>年<span class="tcy">1</span>月<span class="tcy">1</span>日です。</div>
+		<div id="control" lang="ja"><span class="tcy">12</span>月<span class="tcy">31</span>日の次の日は、<br /><span class="tcy">1</span>月<span class="tcy">1</span>日です。</div>
 	</body>
 </html>
