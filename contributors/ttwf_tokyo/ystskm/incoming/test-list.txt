@@ -1,0 +1,7 @@
+1.Identify or synthesize test assertion. (very precise)
+
+2.Construct test scenario.
+
+3.Assert
+
+4.Review the test
