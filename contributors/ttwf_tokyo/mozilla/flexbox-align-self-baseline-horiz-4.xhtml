@@ -8,6 +8,13 @@
 -->
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+  <title>CSS Test: Flexbox align-items: on text, and table</title>
+  <link rel="author" title="Daniel Holbert" href="dholbert@mozilla.com" />
+  <link rel="help" href="http://www.w3.org/TR/css3-flexbox/#align-items" />
+  <link rel="help" href="http://www.w3.org/TR/css3-flexbox/#align-self" />
+  <link rel="help" href="http://www.w3.org/TR/CSS21/tables.html#height-layout" />
+  <meta name="flags" content="" />
+  <meta name="assert" content="Test checks that text and table elements are baseline-aligned when align-items:baseline is specified, and the auto height of the flex container is adjusted accordingly." />
     <style>
       div.flexbox {
         display: flex;
@@ -24,6 +31,7 @@
       .pink { background: pink; }
       .aqua { background: aqua; }
    </style>
+   <script type="javascript" src="../resources/prefixfree.js"></script>
   </head>
   <body>
     <div class="flexbox">
