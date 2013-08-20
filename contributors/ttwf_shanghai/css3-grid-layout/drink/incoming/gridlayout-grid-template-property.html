@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <title>CSS Backgrounds Test:  background-origin:border-box</title>
+  <link rel="author" title="drink" href="mail:drinkw@gmail.com" >
+  <link rel="help" href="http://www.w3.org/TR/css3-grid-layout/#grid-template-property" >
+  <meta name="flags" content="" >
+  <meta name="assert" content="grid-template: named grid areas" >
+
+  <meta charset="utf-8">
+
+<style type="text/css">
+  #grid {
+    display: grid;
+	background: #eee;
+    grid-template: "head head"
+	               "nav main"
+				   "foot .";
+	}
+  #header { grid-area: head; background: #aa9933; }
+  #nav    { grid-area: nav; background: #66ff66; }
+  #main   { grid-area: main; background: #6666ff; }
+  #footer { grid-area: foot; background: #ffff66; }
+  
+</style>
+
+</head>
+<body>
+<div class="infomation">
+Test Passed If : the template creates three rows and two columns, with four named grid areas. The head area spans both columns and the first row of the grid.<br>
+</div>
+
+<div id="grid">
+  <div id="header">Header</div>
+  <div id="nav">Nav</div>
+  <div id="main">Main</div>
+  <div id="footer">Footer</div>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Test: By z-index correctly display cascading relationships.</title>
+  <link rel="author" title="Frank Dou" href="mailto:douyongqing@gmail.com">
+  <link rel="help" href="http://dev.w3.org/csswg/css-grid/#z-order">
+  <meta name="assert" content="By z-index correctly display cascading relationships." />
+  <style type="text/css">
+  #grid {
+     position: relative;
+  }
+  #grid div{
+    position: absolute;
+    padding: 20px;
+  }
+  #high{
+      grid-column: 1;
+      grid-row: 1;
+      z-index: 1000000;
+      background: green;
+  }
+  #low{
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+      z-index: 5;
+      background: red;
+  }
+  p strong{
+    font-size: 24px;
+  }
+  </style>
+</head>
+<body>
+  <p>By <strong>z-index</strong> correctly display cascading relationships.</p>
+  <div id="grid">
+    <div id="high">z-index: 1000000</div>
+    <div id="low">z-index: 5</div>
+  </div>
+</body>
+</html>

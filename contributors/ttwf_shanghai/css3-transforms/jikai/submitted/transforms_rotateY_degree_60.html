@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Transforms Test: transform property with rotate function and one parameter</title>
+    <link rel="author" title="Ji Kai" href="mailto:7jikai@gmail.com">
+    <link rel="help" href="http://www.w3.org/TR/css3-transforms/#transform-property">
+    <link rel="help" href="http://www.w3.org/TR/css3-transforms/#two-d-transform-functions">
+    <link rel="match" href="reference/transforms_rotateY_degree_60_ref.html">
+    <meta name="assert" content="If the rotate with parameter not provided, greenSquare will not cover redSquare.">
+<style>
+		div {
+				position: absolute;
+				left:0px;
+		    height: 200px;
+		    width: 200px;
+		    background:  red;
+		}
+		.transformed {
+		    background:  green;
+		    transform: rotateY(60deg); 
+		}
+</style>
+</head>
+<body>
+	<p>The test passes if there is a green retangle and no red.</p>
+  <div class="transformed"></div>
+</body>
+</html>

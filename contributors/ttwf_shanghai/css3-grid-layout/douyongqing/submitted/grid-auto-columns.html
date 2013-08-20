@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<title>CSS Test: Grid Layout - propdef-grid-auto-columns, arranged not as expected,and also `grid-template-columns` change to `grid-definition-columns`, `grid-template-rows` chang to `grid-definition-rows`</title>
+<link rel="author" title="Frank Dou" href="mailto:douyongqing@gmail.com">
+<link rel="help" href="http://dev.w3.org/csswg/css-grid/images/implicit-columns-and-rows.png">
+<link rel="help" href="http://dev.w3.org/csswg/css-grid/#propdef-grid-auto-columns">
+<meta name="assert" content="Grid Layout - propdef-grid-auto-columns, arranged not as expected,and also `grid-template-columns` change to `grid-definition-columns`, `grid-template-rows` chang to `grid-definition-rows`">
+<style type="text/css">
+#grid {
+    display: grid;
+    grid-definition-columns: 20px;
+    grid-definition-rows:20px;
+}
+#grid > div {
+    padding: 40px;
+    border: 1px #000 solid;
+    background: red;
+}
+#A {
+    grid-column: 1;
+    grid-row: 1;
+}
+#B {
+    grid-column: 5;
+    grid-row: 1 / span 12;
+}
+#C {
+    grid-column: 1 / span 16;
+    grid-row: 2;
+}
+strong{
+    font-size: 20px;
+    color: red;
+}
+code{
+    font-size: 20px;
+    color: blue;
+}
+</style>
+<body>
+    <p>Arranged not as expected, and also <strong>grid-template-columns</strong> change to <code>grid-definition-columns</code>, ,<strong>grid-template-rows</strong> chang to <code>grid-definition-rows</code>.</p>
+    <div id="grid">
+        <div id="A">A</div>
+        <div id="B">B</div>
+        <div id="C">C</div>
+    </div>
+</body>

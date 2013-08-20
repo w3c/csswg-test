@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Grid Layout: Reference File</title>
+    <link rel="author" title="lichangwei" href="mailto:lichangwei@love.com">
+    <style type="text/css">
+      #container {
+        position: absolute;
+      }
+      .bg-green{
+        background-color: green;
+      }
+      #container .a {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+      }
+      #container .b {
+        position: absolute;
+        left: 100px;
+        top: 100px;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+      <p>Test passes if no red color in this page.</p>
+      <div id="container">
+        <div class="a bg-green">A</div>
+        <div class="b bg-green">B</div>
+      </div>
+  </body>
+</html>

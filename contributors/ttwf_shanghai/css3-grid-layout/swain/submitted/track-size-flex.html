@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>CSS Grid Layout Test</title>
+  <link rel="author" title="swain" href="mailto:swainet@126.com"/>
+  <link rel="help" href="http://dev.w3.org/csswg/css-grid/#fr-unit"/>
+  <link rel="match" href="reference/track-size-ref.html">
+  <meta name="flags" content="dom userstyle">
+  <link rel="stylesheet" href="/resources/testharness.css"/>
+  <style type="text/css">
+    #container {
+      position:relative;
+      width:400px;
+      height:100px;
+    }
+
+    #grid {
+      display:grid;
+      grid-definition-columns:100px 1fr;
+      grid-definition-rows:30px 1fr;
+      width:100%;
+      height:100%;
+    }
+
+    #cell1 {
+      grid-column:1;
+      grid-row:1;
+    }
+
+    #cell2 {
+      grid-column:2;
+      grid-row:1;
+    }
+
+    #cell3 {
+      grid-column:1;
+      grid-row:2;
+    }
+
+    #cell4 {
+      grid-column:2;
+      grid-row:2;
+      background-color:green;
+    }
+
+    .error {
+      position:absolute;
+      top:0;
+      left:0;
+      height:100%;
+      width:100%;
+      z-index:-1;
+    }
+
+    #table {
+      width:100%;
+      height:100%;
+      border-collapse:collapse;
+    }
+
+    #table td {
+      padding:0;
+      vertical-align:top;
+    }
+
+    #table td:first-child {
+      width:100px;
+    }
+
+    #table tr:first-child td {
+      height:30px;
+    }
+  </style>
+  <script src="/resources/testharness.js"></script>
+  <script src="/resources/testharnessreport.js"></script>
+</head>
+<body>
+<p>Test passes if there is a green square and no red.</p>
+
+<div id="container">
+  <div id="grid">
+    <div id="cell1">cell1</div>
+    <div id="cell2">cell2</div>
+    <div id="cell3">cell3</div>
+    <div id="cell4">cell4</div>
+  </div>
+  <div class="error">
+    <table id="table">
+      <tbody>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td style="background-color:red">&nbsp;</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div id="log"></div>
+<script>
+  function getPropertyValue(id, property) {
+    return window.getComputedStyle(document.getElementById(id)).getPropertyValue(property);
+  }
+
+  test(function () {
+    assert_equals(getPropertyValue('cell4', 'width'),
+      "300px",
+      "Cell4's width should be 300px.");
+    assert_equals(getPropertyValue('cell4', 'height'),
+      "70px",
+      "Cell4's height should be 70px.");
+  }, "Grid items dimensions.");
+
+</script>
+</body>
+</html>

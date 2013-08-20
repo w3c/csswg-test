@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CSS Background and Border Test:border-image </title>
+    <link rel="author" title="byronv5" href="byeshore@qq.com">
+	<link rel="help" href="http://www.w3.org/TR/css3-background/#box-shadow">
+    <meta name="assert" content="test the inset box shadow">
+    <style type="text/css">
+    .border-image{
+		width:150px;
+		height:150px;
+		border:10px solid red;
+        background-image:URL(../support/green-20-20.png);		
+		box-shadow:rgba(0,0,0,0.5) 10px 10px inset;
+    }
+    </style>
+</head>
+<body>
+    The image used as background-image is :<br />
+    <img src="../support/green-20-20.png" />
+
+    <p>test is passes if the shadow is display!</p>
+        <!--test is passes if the shadow is display -->
+        <div class="border-image">boder-image
+        </div>
+</body>
+</html>

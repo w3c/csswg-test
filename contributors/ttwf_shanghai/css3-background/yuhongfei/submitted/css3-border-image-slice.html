@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>CSS Border Test:border image slice</title>
+		<link rel="author" title="yuhongfei" href="mailto:yuhongfei1001@163.com" />
+		<link rel="help" href="http://www.w3.org/TR/css3-background/#border-image-slice" />
+		<link rel="match" href="reference/css3-border-image-slice-ref.html" />
+		<style type="text/css">
+            div {
+                width: 100px;
+                height: 100px;
+                border: solid 26px red;
+                border-image-source: url(supports/border.png);
+				border-image-slice:33%;
+            }
+		</style>
+	</head>
+	<body>
+		<p>
+			The test passes if the blue diamond is stretching between the red diamonds.
+		</p>
+		<div></div>
+	</body>
+</html>

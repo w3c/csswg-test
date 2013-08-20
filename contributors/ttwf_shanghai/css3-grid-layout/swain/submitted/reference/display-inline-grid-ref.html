@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>CSS Grid Layout Test</title>
+  <link rel="author" title="swain" href="mailto:swainet@126.com"/>
+  <link rel="help" href="http://dev.w3.org/csswg/css-grid/#grid-containers"/>
+  <meta name="flags" content="dom userstyle">
+  <link rel="stylesheet" href="/resources/testharness.css"/>
+  <style type="text/css">
+    #container {
+      position:relative;
+    }
+
+    .inline {
+      display:inline-block;
+      width:100px;
+    }
+
+    #table {
+      width:400px;
+      height:100px;
+      border-collapse:collapse;
+    }
+
+    #table td {
+      padding:0;
+      vertical-align:top;
+    }
+
+    #table td:first-child {
+      width:100px;
+    }
+
+    #table tr:last-child td {
+      height:30px;
+    }
+
+  </style>
+</head>
+<body>
+<p>Test passes if there is 4 green rectangles and no red.</p>
+
+<div id="container">
+  <div class="inline">inline-block</div><div style="display:inline-block;width:400px">
+    <table id="table">
+      <tbody>
+      <tr>
+        <td style="background-color:green">cell1</td>
+        <td style="background-color:limegreen">cell2</td>
+      </tr>
+      <tr>
+        <td style="background-color:limegreen">cell3</td>
+        <td style="background-color:green">cell4</td>
+      </tr>
+      </tbody>
+    </table>
+  </div><div class="inline">inline-block</div>
+  </div>
+</div>
+</body>
+</html>

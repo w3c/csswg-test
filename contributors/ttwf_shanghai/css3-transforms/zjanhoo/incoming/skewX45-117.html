@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+	<head>
+		<title>CSS3 Transforms Test: transform property with skewX function and one parameter</title>
+		<link rel="author" title="Zhanghong" href="mailto:zjanhoo@163.com"/>
+		<link rel="help" title="CSS skewX" href="http://www.w3.org/TR/css3-transforms/#transform-property"/>
+		<link rel="match" href="refrence/skewX45-117-ref.html">
+		<meta name="flags" content="dom">
+		<meta name="assert" content="Test transforms skewX(-45deg)">
+		<style type="text/css">
+			p { padding-left: 50px; }
+
+			.blueBox {
+				position: absolute;
+				left: 50px;
+				top: 50px;
+				z-index: 2;
+				width: 100px;
+				height: 100px;
+				background: blue;
+				-webkit-transform: skewX(-45deg);
+			}
+
+			.redBox {
+				position: absolute;
+				left: 0px;
+				top: 50px;
+				z-index: 1;
+				width: 200px;
+				height: 100px;
+			}
+
+			.r-left {
+				float: left;
+				border-top: 50px solid #FFFFFF;
+				border-left: 50px solid #FFFFFF;
+				border-right: 50px solid #FF0000;
+				border-bottom: 50px solid #FF0000;
+				width: 0px;
+				height: 0px;
+				overflow: hidden;
+			}
+
+			.r-right {
+				float: left;
+				border-top: 50px solid #FF0000;
+				border-left: 50px solid #FF0000;
+				border-right: 50px solid #FFFFFF;
+				border-bottom: 50px solid #FFFFFF;
+				width: 0px;
+				height: 0px;
+				overflow: hidden;				
+			}					
+		</style>
+	</head>
+	<body>
+		<p>There should be only a blue box below when the test passes.</p>
+		<div class="blueBox"></div>
+		<div class="redBox">
+			<div class="r-left"></div>
+			<div class="r-right"></div>
+		</div>
+	</body>
+</html>

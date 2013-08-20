@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Background and border</title>
+	<link rel="author" title="Cara Zhu" href="1144978904@qq.com">
+    <link rel="help" href="http://dev.w3.org/csswg/css-backgrounds/#box-decoration-break">
+    <link rel="help" href="http://dev.w3.org/csswg/css-backgrounds/#background-image">
+    <meta name="assert" content="The test passes if the highlited texts in the slice section lost their styles at the break point,while  in the clone section it lost their styles.">
+    <style type="text/css">
+			body {
+				font: 30px/1.6 helvetica, arial, sans-serif;
+				margin: 3em;
+				width:  35em;
+			}
+			
+			h1 {
+				font-size: 16px;
+			}
+			
+			section {
+				display: block;
+				width: 29em;
+			}
+			section code {
+				border: 1px solid rgb(238,206,0);
+				border-radius: 15px;
+				background: yellow;
+				padding: 2px;
+				box-shadow: 0px 1px 3px dimgrey;
+
+			}
+			
+		.discription{
+			font-size:16px;
+		}
+			#clone {
+				margin-bottom: 3em;
+			}
+			
+			#slice code {
+				box-decoration-break: slice;
+			}
+			
+			#clone code {
+				box-decoration-break: clone;
+			}
+		</style>
+
+</head>
+<body>
+    <p class="discription">The test passes if the highlited texts in the slice section lost their styles at the break point,while  in the clone section it lost their styles
+	</p>
+	<section id="slice">
+			<h1>Box-decoration-break: slice</h1>
+			<p>For boxes broken across columns, the columns are treated <code> as-one</code> continuous element </p>
+	</section>
+		<section id="clone">
+			<h1>Box-decoration-break: clone</h1>
+			<p>For boxes broken across columns, the columns are treated <code> as-one</code> continuous element </p>
+		</section>
+
+
+    
+</body>
+</html>

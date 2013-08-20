@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Background and border</title>
+	<link rel="author" title="Cara Zhu" href="1144978904@qq.com">
+    <link rel="help" href="http://dev.w3.org/csswg/css-backgrounds/#background-image">
+    <link rel="help" href="http://dev.w3.org/csswg/css-backgrounds/#background-image">
+    <meta name="assert" content="The test passes if we can see the background-image is exactly same as above.">
+    <style type="text/css">
+		.mul{
+			width:78px;
+			height:78px;
+			background-image: url(support/red-diamond.png),url(support/blue-diamond.png), url(support/red-diamond.png), url(support/blue-diamond.png),url(support/blue-diamond.png),url(support/red-diamond.png),url(support/blue-diamond.png),
+			url(support/red-diamond.png);
+			background-position: left top, 26px top, 52px top,left 26px,52px 26px,left 52px,26px 52px,52px 52px;
+			background-repeat: no-repeat, no-repeat,no-repeat;,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat
+		}
+
+    </style>
+</head>
+<body>
+    <p>The test passes if the two picture are same
+	<br>test fail if the second picture is not complete or not same as the first one
+	</p>
+
+	<img src="support/border.png">
+	<br><br>
+	<div class="mul">  </div>
+
+
+    
+</body>
+</html>

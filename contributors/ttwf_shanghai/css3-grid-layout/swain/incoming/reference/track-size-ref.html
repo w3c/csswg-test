@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>CSS Grid Layout Test</title>
+  <link rel="author" title="swain" href="mailto:swainet@126.com"/>
+  <link rel="help" href="http://dev.w3.org/csswg/css-grid/#grid-track-concept"/>
+  <meta name="flags" content="dom userstyle">
+  <link rel="stylesheet" href="/resources/testharness.css"/>
+  <style type="text/css">
+    #container {
+      position:relative;
+      width:400px;
+      height:100px;
+    }
+
+
+
+    .error {
+      position:absolute;
+      top:0;
+      left:0;
+      height:100%;
+      width:100%;
+      z-index:-1;
+    }
+
+    #table {
+      width:100%;
+      height:100%;
+      border-collapse:collapse;
+    }
+
+    #table td {
+      padding:0;
+      vertical-align:top;
+    }
+
+    #table td:first-child {
+      width:100px;
+    }
+
+    #table tr:first-child td {
+      height:30px;
+    }
+  </style>
+  <script src="/resources/testharness.js"></script>
+  <script src="/resources/testharnessreport.js"></script>
+</head>
+<body>
+<p>Test passes if there is a green square and no red.</p>
+
+<div id="container">
+  <div class="error">
+    <table id="table">
+      <tbody>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td style="background-color:green">&nbsp;</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>

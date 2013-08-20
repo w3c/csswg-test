@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Background and border</title>
+	<link rel="author" title="Cara Zhu" href="1144978904@qq.com">
+    <link rel="help" href="http://dev.w3.org/csswg/css3-background/#border-radius">
+    <link rel="help" href="http://www.w3.org/TR/css3-background/#border-radius">
+    <link rel="match" href="reference/background-size-ref.html">
+    <meta name="assert" content="The test passes if we can see the background-image is exactly same as above.">
+    <style type="text/css">
+        .con{
+			 width:150px;
+			 height:150px;
+			 background-image:url(support/green-150-150.png);
+			 background-size:contain;
+			 background-repeat:no-repeat;
+			 border-radius:13px;
+			}
+
+    </style>
+</head>
+<body>
+    <p>The test passes if the two pic are same
+	<br>The test fail if the second picture has no radius feature
+	</p>
+	<img src="support/radius.jpg">
+	<br>
+	<br>
+    <div class="wrap">
+        <div class="con">
+          
+        </div>
+	</div>
+
+    
+</body>
+</html>

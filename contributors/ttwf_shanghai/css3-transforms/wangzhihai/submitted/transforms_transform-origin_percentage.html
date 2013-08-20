@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>CSS Transforms Test: the transform-origin property of value (0%, 0%)</title>
+    <link rel="author" name="holmes" href="mailto:hikpad@gmail.com" />
+    <link rel="help" href="http://www.w3.org/TR/css3-transforms/#transform-property" />
+ 	<link rel="help" href="http://www.w3.org/TR/css3-transforms/#two-d-transform-functions" />
+ 	<link rel="match" href="reference/transforms_transform-origin_percentage_ref.html" />
+ 	<meta name="assert" content="If the value of transform-origin doesn't set (0%, 0%), greenRectangle will not cover redRectangle.">
+ 	<style>
+		#src {
+			position: absolute;
+			top: 100px;
+			left: 100px;
+			width: 100px;
+			height: 100px;
+			background: green;
+			transform-origin: 0% 0%;
+			transform: scale(2.0);
+		}
+
+		#ref {
+			position: absolute;
+			top: 100px;
+			left: 100px;
+			width: 200px;
+			height: 200px;
+			background: red;					
+		}
+
+ 	</style>
+</head>
+<body>   
+	<h1>The test passes if there is a green retangle and no red.</h1>           
+    <div id="ref"></div>
+    <div id="src"></div> 
+<script>
+</script>
+</body>
+</html>
+
+
+ 

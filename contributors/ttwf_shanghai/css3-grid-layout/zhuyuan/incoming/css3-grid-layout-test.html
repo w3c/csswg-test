@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Css Grid Layout Test</title>
+        <link rel="author" title="zhuyuan" href="yzhupt@163.com">
+        
+       <meta>
+        <style>
+          .grid{
+                background:red;
+               display:grid;
+                grid-definition-columns:50px 50px;
+                width:100px;
+                height:20px;
+               
+               
+            }
+           .red-left-area{grid-column:1;grid-row:1;background:green;  height:20px;}
+           .green-right-area{grid-column:2;grid-row:1;background:green; height:20px;float:right;}
+            
+            
+        </style>
+    </head>
+    <body>
+        <p style="margin-bottom:30px;">Test passes if there is a green area, and no any red.</p>
+
+         
+        <div class="grid">
+                <div class="red-left-area"></div>
+                <div class="green-right-area"></div>
+            </div>
+        
+       
+    </body>
+</html>

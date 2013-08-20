@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>CSS Border-images Test:Differences between border-image and -webkit-border-image in Chrome</title>
+		<link rel="author" title="zhangqi" href="mailto:33468248@qq.com" />
+		<link rel="help" href="http://www.w3.org/TR/css3-background/#border-image" />
+        <link rel="match" href="../reference/border-image.html" />
+		<style type="text/css">
+            .box {
+                
+                width: 200px;
+                height: 200px;
+                position: absolute;
+            
+             -webkit-border-image: url(../support/blue-diamond.png)  0 12 0 12  round; 
+
+            }
+            #box2{
+                 width: 200px;
+                height: 200px;
+                position: absolute;
+                background-color:#fff;
+
+            }
+		</style>
+	</head>
+	<body>
+		<p>
+			Differences between border-image and -webkit-border-image in Chrome
+		</p>
+		
+        <div class="box">
+            
+            <div id="box2"></div>
+
+        </div>
+
+	</body>
+</html>

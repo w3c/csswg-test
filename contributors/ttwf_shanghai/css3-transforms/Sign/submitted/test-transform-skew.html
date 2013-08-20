@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Transform Rotate</title>
+	<link rel="author" title="Sign" href="mailto:ccx01@126.com">
+	<link rel="help" href="http://www.w3.org/TR/css3-transform/#two-d-transform-functions">
+	<link rel="match" href="reference/test-transform-skew-ref.html">
+	<meta name="assert" content="div with 'transform: skew(180deg);' declaration, the block skew 180deg">
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		#position{
+			position: absolute;
+			top: 100px;
+			left: 100px;	
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+		#rotate{
+			position: absolute;
+			transform: skew(180deg);
+			top: 100px;
+			left: 100px;
+			background: green;
+			width: 100px;
+			height: 100px
+		}
+	</style>
+</head>
+<body>
+	<p>This test passes if the green block cover red block </p>
+	<div id="position"></div>
+	<div id="rotate"></div>
+</body>
+</html>

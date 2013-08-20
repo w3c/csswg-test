@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>CSS Grid Layout Test</title>
+  <link rel="author" title="swain" href="mailto:swainet@126.com"/>
+  <link rel="help" href="http://dev.w3.org/csswg/css-grid/#adapting-to-available-space"/>
+  <meta name="flags" content="dom userstyle">
+  <link rel="stylesheet" href="/resources/testharness.css"/>
+  <style type="text/css">
+    #container {
+      position:relative;
+      width:400px;
+      height:100px;
+    }
+
+    .error {
+      position:absolute;
+      top:0;
+      left:0;
+      height:100%;
+      width:100%;
+      z-index:-1;
+    }
+
+    #table {
+      width:100%;
+      height:100%;
+      border-collapse:collapse;
+    }
+
+    #table td {
+      padding:0;
+      vertical-align:top;
+    }
+
+    #table tr:last-child td {
+      width:100px;
+      height:30px;
+    }
+  </style>
+</head>
+<body>
+<p>Test passes if there is a green rectangle and no red.</p>
+
+<div id="container">
+
+  <div class="error">
+    <table id="table">
+      <tbody>
+      <tr>
+        <td>cell1</td>
+        <td rowspan="2" style="background-color:green;">cell2</td>
+      </tr>
+      <tr>
+        <td>cell3</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>
