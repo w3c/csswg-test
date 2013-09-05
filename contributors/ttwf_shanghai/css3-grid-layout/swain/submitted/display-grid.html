@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>CSS Grid Layout Test</title>
+  <link rel="author" title="swain" href="mailto:swainet@126.com"/>
+  <link rel="help" href="http://dev.w3.org/csswg/css-grid/#grid-containers"/>
+  <link rel="match" href="reference/display-grid-ref.html">
+  <meta name="flags" content="dom userstyle">
+  <link rel="stylesheet" href="/resources/testharness.css"/>
+  <style type="text/css">
+    #container {
+      position:relative;
+      width:400px;
+      height:100px;
+    }
+
+    #grid {
+      display:grid;
+      grid-definition-columns:100px 300px;
+      grid-definition-rows:70px 30px;
+      height:100%;
+    }
+
+    #cell1 {
+      grid-column:1;
+      grid-row:1;
+      background-color:green;
+    }
+
+    #cell2 {
+      grid-column:2;
+      grid-row:1;
+      background-color:limegreen;
+    }
+
+    #cell3 {
+      grid-column:1;
+      grid-row:2;
+      background-color:limegreen;
+    }
+
+    #cell4 {
+      grid-column:2;
+      grid-row:2;
+      background-color:green;
+    }
+
+    .error {
+      position:absolute;
+      top:0;
+      left:0;
+      height:100%;
+      width:100%;
+      z-index:-1;
+    }
+
+    #table {
+      width:100%;
+      height:100%;
+      border-collapse:collapse;
+    }
+
+    #table td {
+      padding:0;
+      vertical-align:top;
+    }
+
+    #table td:first-child {
+      width:100px;
+    }
+
+    #table tr:last-child td {
+      height:30px;
+    }
+  </style>
+  <script src="/resources/testharness.js"></script>
+  <script src="/resources/testharnessreport.js"></script>
+</head>
+<body>
+<p>Test passes if there is 4 green rectangles and no red.</p>
+
+<div id="container">
+  <div id="grid">
+    <div id="cell1">cell1</div>
+    <div id="cell2">cell2</div>
+    <div id="cell3">cell3</div>
+    <div id="cell4">cell4</div>
+  </div>
+  <div class="error">
+    <table id="table">
+      <tbody>
+      <tr>
+        <td style="background-color:#f00">cell1</td>
+        <td style="background-color:#e00">cell2</td>
+      </tr>
+      <tr>
+        <td style="background-color:#e00">cell3</td>
+        <td style="background-color:#f00">cell4</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div id="log"></div>
+<script>
+  function getPropertyValue(id, property) {
+    return window.getComputedStyle(document.getElementById(id)).getPropertyValue(property);
+  }
+
+  test(function () {
+    assert_equals(getPropertyValue('cell1', 'width'),
+      "100px",
+      "Cell1's width should be 100px.");
+    assert_equals(getPropertyValue('cell1', 'height'),
+      "70px",
+      "Cell1's height should be 70px.");
+    assert_equals(getPropertyValue('cell2', 'width'),
+      "300px",
+      "Cell2's width should be 300px.");
+    assert_equals(getPropertyValue('cell2', 'height'),
+      "70px",
+      "Cell2's height should be 70px.");
+    assert_equals(getPropertyValue('cell3', 'width'),
+      "100px",
+      "Cell3's width should be 100px.");
+    assert_equals(getPropertyValue('cell3', 'height'),
+      "30px",
+      "Cell3's height should be 30px.");
+    assert_equals(getPropertyValue('cell4', 'width'),
+      "300px",
+      "Cell4's width should be 300px.");
+    assert_equals(getPropertyValue('cell4', 'height'),
+      "30px",
+      "Cell4's height should be 30px.");
+  }, "Grid items dimensions.");
+
+</script>
+</body>
+</html>

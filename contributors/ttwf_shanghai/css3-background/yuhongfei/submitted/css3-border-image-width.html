@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>CSS Border Test:border image width</title>
+		<link rel="author" title="yuhongfei" href="mailto:yuhongfei1001@163.com" />
+		<link rel="help" href="http://www.w3.org/TR/css3-background/#border-image-width" />
+		<link rel="match" href="reference/css3-border-image-width-ref.html" />
+		<style type="text/css">
+            div {
+                width: 100px;
+                height: 100px;
+                border: solid 26px red;
+                border-image-source: url(supports/blue-diamond.png);
+				border-image-width:50%;
+            }
+		</style>
+	</head>
+	<body>
+		<p>
+			The test passes if the four blue diamond.
+		</p>
+		<div></div>
+	</body>
+</html>

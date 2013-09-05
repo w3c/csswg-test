@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Transforms Test: transform property with scale function and two parameters</title>
+    <link rel="author" title="liming zou" href="mailto:zouliming888@gmail.com">
+    <link rel="help" href="http://www.w3.org/TR/css3-transforms/#transform-property">
+    <link rel="help" href="http://www.w3.org/TR/css3-transforms/#two-d-transform-functions">
+    <link rel="match" href="reference/scale-double-size-ref.html">
+    <meta name="assert" content="This transform enlarges the element double size from the original center point.">
+    <style type="text/css">
+        .greenSquare {
+            position: absolute;
+            top: 100px;
+            left: 300px;
+            width: 100px;
+            height: 100px;
+            background: green;
+            transform: scale(2,2);
+        }
+    </style>
+</head>
+<body>
+    <p>The test passes if there is a green square and no red.</p>
+    <div class="greenSquare"></div>
+</body>
+</html>

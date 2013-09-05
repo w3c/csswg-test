@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+	<head>
+		<title>CSS3 skewX refrence file</title>
+		<link rel="author" title="Zhanghong" href="mailto:zjanhoo@163.com"/>
+		<style type="text/css">
+			p { padding-left: 50px; }
+
+			.blueBox {
+				position: absolute;
+				left: 0px;
+				top: 50px;
+				z-index: 2;
+				width: 200px;
+				height: 100px;
+			}
+
+			.r-left {
+				float: left;
+				border-top: 50px solid #FFFFFF;
+				border-left: 50px solid #FFFFFF;
+				border-right: 50px solid blue;
+				border-bottom: 50px solid blue;
+				width: 0px;
+				height: 0px;
+				overflow: hidden;
+			}
+
+			.r-right {
+				float: left;
+				border-top: 50px solid blue;
+				border-left: 50px solid blue;
+				border-right: 50px solid #FFFFFF;
+				border-bottom: 50px solid #FFFFFF;
+				width: 0px;
+				height: 0px;
+				overflow: hidden;				
+			}			
+		</style>
+	</head>
+	<body>
+		<p>There should be only a blue box below.</p>
+		<div class="blueBox">
+			<div class="r-left"></div>
+			<div class="r-right"></div>
+		</div>
+	</body>
+</html>

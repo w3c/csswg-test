@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CSS Background and Border Test:border-image </title>
+    <link rel="author" title="byronv5" href="byeshore@qq.com">
+	<link rel="help" href="http://www.w3.org/TR/css3-background/#box-shadow">
+    <meta name="assert" content="test the inset box shadow">
+    <style type="text/css">
+	div.sample1 {
+		width:100px; height:200px; 
+		border:10px solid green; 
+		border-top-right-radius:30px;
+		border-top-left-radius:30px;
+		border-bottom-right-radius:50px;
+		border-bottom-left-radius:50px;
+		background-repeat:no-repeat;
+		box-decoration-break:slice;
+	}
+
+	div.sample1 p {
+	page-break-before:always; 	
+	page-break-after:always;
+	}	 
+	div.sample2 {
+		width:100px; height:200px; 
+		border:10px solid green;
+		border-top-right-radius:30px;
+		border-top-left-radius:30px;
+		border-bottom-right-radius:50px;
+		border-bottom-left-radius:50px;	
+		background-repeat:no-repeat;
+		box-decoration-break:clone;
+	}
+
+	div.sample2 p {
+	page-break-before:always; 
+	page-break-after:always;
+	}	
+
+	.sample1 code {
+				border: 1px solid rgb(238,206,0);
+				border-radius: 4px;
+				background:yellow;
+				padding: 2px;
+			}
+	.sample2 code1 {
+				border: 1px solid rgb(238,206,0);
+				border-radius: 4px;
+				background:yellow;
+				padding: 2px;
+			}
+    </style>
+</head>
+<body>
+    <p>test is passes if?!</p>
+        <!--? -->
+			<div class="sample1">
+				<p><code>box-decoration-break:slice;</code></br>
+				box-decoration-break</p>		
+			</div>
+			<div class="sample2">
+				<p><code1>box-decoration-break:clone;</code1></br>
+				box-decoration-break</p>	
+			</div>
+</body>
+</html>

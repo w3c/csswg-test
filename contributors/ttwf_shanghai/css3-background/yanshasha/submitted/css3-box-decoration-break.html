@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>CSS Border Test:border image property width value clone</title>
+		<link rel="author" title="yanshasha" href="mailto:yanshasha133@gmail.com" />
+		<link rel="help" href="http://dev.w3.org/csswg/css-backgrounds/#the-box-decoration-break" />
+
+		<style type="text/css">
+            div {
+                width: 300px;
+                line-height: 2;
+                color:#555;
+            }
+            span {
+                box-decoration-break: clone;
+                border: solid 1px black;
+                border-radius: 10px;
+                padding: 5px;
+                background-color: green;
+                color: white;
+            }
+		</style>
+	</head>
+	<body>
+		<p>
+			The test passes if the two green boxes both have border radius in each corner.
+		</p>
+		<div>
+			Each box is independently wrapped with the border and padding. The<span>border-radius and border-image and box-shadow</span>, if any, are applied to each box independently.
+		</div>
+	</body>
+</html>

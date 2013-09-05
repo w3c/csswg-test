@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>CSS Test: css3-layout-grid</title>
+  <link rel="author" title="jane" href="mailto:zjgoing@gmail.com">
+  <style>
+    #grid {
+          height: 300px;
+          width: 500px;
+          border:1px dashed #f00;
+          display: grid;
+          grid-columns: auto minmax(min-content, 1fr);
+          grid-rows: auto minmax(min-content, 1fr) auto;
+    }
+    #A{ grid-column:1; grid-row:1; width: 100px; height:100px; background:#ccc;}
+    #B{ grid-column:1; grid-row:3; background:#ddd;}
+    #C{ grid-column:1; grid-row:2; justify-self: start;  background:#eee;}
+    #D{ grid-column:2; grid-row:1; background:#fff;}
+    #E{ grid-column:2; grid-row:3; align-self: center; background:#f00;}
+  </style>
+ </head>
+ <body>
+  <div id="grid">
+    <div id="A">A</div>   
+    <div id="B">B</div>   
+    <div id="C">C</div>   
+    <div id="D">D</div>   
+    <div id="E">E</div>   
+  </div>
+ </body>
+</html>

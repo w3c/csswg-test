@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CSS Background and Border Test:background-size </title>
+    <link rel="author" title="byronv5" href="byeshore@qq.com">
+    <link rel="match" href="reference/bc-gr-size.html">
+    <link rel="help" href="http://dev.w3.org/csswg/css-backgrounds/#the-background-size">
+    <meta name="assert" content="test the background-size">
+    <style type="text/css">
+    .background-size{
+        width:295px;
+        height:289px;
+        background-image:URL(./support/bg.jpg);
+		background-size:80% 60px;
+		background-repeat: no-repeat;
+    }
+    </style>
+</head>
+<body>
+    The image used as background-image is :<br />
+    <img src="./support/bg.jpg" />
+
+    <p>The test passes if the background-image's width is 80% 0f div and height:60px</p>
+        <!--the test passes if the background-image's width is 80% 0f div and height:60px  -->
+        <div class="background-size">
+        </div>
+</body>
+</html>

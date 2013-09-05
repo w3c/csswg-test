@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <title>CSS Gridlayout Test:  Gridlayout-origin:grid-template-property</title>
+  <link rel="author" title="drink" href="mail:drinkw@gmail.com" >
+  <link rel="help" href="http://www.w3.org/TR/css3-grid-layout/#grid-template-property" >
+  <meta name="flags" content="" >
+  <meta name="assert" content="grid-template: named grid areas" >
+
+  <meta charset="utf-8">
+
+<style type="text/css">
+  #grid {
+	background: #eee;
+	}
+  #row { display:table-row; }
+  #header { background: #aa9933;display:table-cell; }
+  #nav    { background: #66ff66;display:table-cell; }
+  #main   { background: #6666ff;display:table-cell; }
+  #footer { background: #ffff66;display:table-cell; }
+
+</style>
+
+</head>
+<body>
+<div class="infomation">
+Test Passed If : the template creates three rows and two columns, with four named grid areas. The head area spans both columns and the first row of the grid.<br>
+</div>
+<div id="grid">
+  <div id="row">
+  <div id="header">Header</div>  
+  <div id="header"></div>
+  </div>
+  <div id="row">
+  <div id="nav">Nav</div>
+  <div id="main">Main</div>
+  </div>
+  <div id="row">
+  <div id="footer">Footer</div>
+  </div>
+</div>
+
+</body>
+
+</html>

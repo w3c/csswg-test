@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Test box-shadow-outline</title>
+    <link rel="author" title="mark" href="mailto:markje@live.cn">
+    <link rel="help" href="http://dev.w3.org/csswg/css-backgrounds/#the-box-shadow" />
+    <link rel="match" href="../boxshadow-outline-rel.html">
+    <meta name="assert" content="In FireFox outline outside the box-shadow effect occurs,the normal don't see the box-shadow" />
+    <style>
+        .test_backG{width:210px; height: 210px;
+            outline: solid yellow 10px;
+            position:relative;
+        }
+        .test_backG span:nth-child(1){background: #999; display: block; width: 200px; height: 200px; position: absolute; left: 0; top: 0; z-index: 11;}
+        .test_backG span:nth-child(2){background: green; display: block; width: 200px; height: 200px; position: absolute; bottom: 0; right: 0; z-index: 10;}
+    </style>
+</head>
+
+<body>
+<p>Normally only see the yellow border, FireFox see the yellow border and the Green Box-shadow effect is not normal.</p>
+<div class="test_backG"><span></span><span></span></div>
+</body>
+</html>

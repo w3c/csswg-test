@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>CSS Test: css3-layout-grid</title>
+  <link rel="author" title="jane" href="mailto:zjgoing@gmail.com">
+  <style>
+    #grid {
+          display: -ms-grid;
+          -ms-grid-columns: 1fr 1fr;
+          -ms-grid-rows: 1fr 1fr;
+    }
+    #grid div{ width: 100px; height: 100px;}
+    /*
+    ** property "align-self", use this property, divA is in the above, divB is below.
+      we can use :foot, head,center. the following example use "foot"
+      see the difference with picture/1.png and 2.png
+    */  
+    #A{ 
+        background: #0f0;
+        -ms-grid-column:1;
+        -ms-grid-row:2;
+        -ms-align-self: foot;
+      }
+    #B{ 
+        background: #ccc;
+        -ms-grid-column:1;
+        -ms-grid-row:1;
+      }
+  </style>
+ </head>
+ <body>
+  <div id="grid">
+      <div id="A">A</div>
+      <div id="B">B</div> 
+  </div>     
+ </body>
+</html>

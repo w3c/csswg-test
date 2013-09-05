@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CSS Background Position Test: other corners</title>
+    <link rel="author" title="Michael" href="mailto:sunkinux@qq.com" />
+    <link rel="help" href="http://dev.w3.org/csswg/css-backgrounds/#background-position" />
+    <style type="text/css">
+        body {
+            margin:0;
+        }
+        .greenSquare {
+            width:100px;
+            height:100px;
+            background:url(support/green.jpg) right 85% bottom 15% no-repeat, url(support/red.jpg) 15% 85% no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="greenSquare"></div>
+    <p>The test passes if there is a green square and no red.</p>
+</body>
+</html>

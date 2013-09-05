@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Grid Layout: support</title>
+    <link rel="author" title="lichangwei" href="mailto:lichangwei@love.com">
+    <link rel="help" href="http://www.w3.org/TR/css3-grid-layout/">
+    <link rel="match" href="reference/css-grid-layout-support-ref.html">
+    <meta name="assert" content="Test checks that if the CSS grid layout feature is supported.">
+    <style type="text/css">
+      #container {
+        position: absolute;
+      }
+      .bg-red{
+        background-color: red;
+      }
+      #container .a {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+      }
+      #container .b {
+        position: absolute;
+        left: 100px;
+        top: 100px;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+    <style type="text/css">
+      #grid {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        display: grid;
+        grid-definition-columns: 1fr 1fr;
+        grid-definition-rows: 1fr 1fr;
+      }
+      .bg-green{
+        background-color: green;
+      }
+      #grid .a {
+        grid-row: 1;
+        grid-column: 1;
+        width: 100px;
+        height: 100px;
+      }
+      #grid .b {
+        grid-row: 2;
+        grid-column: 2;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+      <p>Test passes if no red color in this page.</p>
+      <div id="container">
+        <div class="a bg-red">A</div>
+        <div class="b bg-red">B</div>
+      </div>
+      <div id="grid">
+        <div class="a bg-green">A</div>
+        <div class="b bg-green">B</div>
+      </div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+		<title>CSS3 Transforms Test: transform property with translate function and one parameter</title>
+		<link rel="author" title="Zhanghong" href="mailto:zjanhoo@163.com"/>
+		<link rel="help" title="CSS translate" href="http://www.w3.org/TR/css3-transforms/#transform-property"/>
+		<link rel="match" href="refrence/translate-117-ref.html">
+		<meta name="flags" content="dom">
+		<meta name="assert" content="Test transforms translate(100px, 100px)">
+		<style type="text/css">
+			p { padding-left: 50px; }
+
+			.blueBox {
+				position: absolute;
+				left: 50px;
+				top: 50px;
+				z-index: 2;
+				width: 100px;
+				height: 100px;
+				background: blue;
+				-webkit-transform: translate(100px, 100px);
+			}
+
+			.redBox {
+				position: absolute;
+				left: 150px;
+				top: 150px;
+				z-index: 1;
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<p>There should be only a blue box below when the test passes.</p>
+		<div class="blueBox"></div>
+		<div class="redBox"></div>
+	</body>
+</html>

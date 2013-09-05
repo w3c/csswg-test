@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>CSS Test: css3-layout-grid</title>
+  <link rel="author" title="jane" href="mailto:zjgoing@gmail.com">
+  <style>
+    #grid {
+          height: 300px;
+          width: 500px;
+          border:1px dashed #0f0;
+          /*
+          ** property "display" is already exit, so we can use "-ms" before new property "grid"
+          */
+          display: -ms-grid;
+          /*
+          **IE10+ is not support "grid-definition-columns" and "grid-definition-rows", so it use "grid-columns" and "grid-rows" instead.
+          */
+          -ms-grid-columns: auto minmax(min-content, 1fr);
+          -ms-grid-rows: auto minmax(min-content, 1fr) auto;
+    }
+    /*
+    ** use "-ms" before new propeerties "grid-columns","grid-rows","justfy-self","align-self". just IE10+ support
+      see the difference with picture/11.png and 12.png
+    */
+    #A{ -ms-grid-column:1; -ms-grid-row:1; width: 100px; height:100px; background:#ccc;}
+    #B{ -ms-grid-column:1; -ms-grid-row:3; background:#ddd;}
+    #C{ -ms-grid-column:1; -ms-grid-row:2; -ms-justify-self: start;  background:#eee;}
+    #D{ -ms-grid-column:2; -ms-grid-row:1; background:#fff;}
+    #E{ -ms-grid-column:2; -ms-grid-row:3; -ms-align-self: center; background:#0f0;}
+  </style>
+ </head>
+ <body>
+  <div id="grid">
+    <div id="A">A</div>   
+    <div id="B">B</div>   
+    <div id="C">C</div>   
+    <div id="D">D</div>   
+    <div id="E">E</div>   
+  </div>
+ </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CSS Test: Display property with 'grid' value.</title>
+    <link rel="author" title="turtlegxb" href="guxinbiao@baidu.com" />
+    <link rel="help" href="http://dev.w3.org/csswg/css-grid/#adapting-to-available-space" />
+    <meta name="assert" content="The 'display' property accepts 'grid' value." />
+    <style type="text/css">
+        #grid {
+            display: grid;
+            grid-definition-columns: auto minmax(min-content, 1fr);
+            grid-definition-rows: auto minmax(min-content, 1fr) auto
+        }
+        #title    { grid-column: 1; grid-row: 1 ; background:blue;}
+        #score    { grid-column: 1; grid-row: 3 ; background:yellow;}
+        #stats    { grid-column: 1; grid-row: 2; justify-self: start ; background: gray;}
+        #board    { grid-column: 2; grid-row: 1 / span 2; background: green;}
+        #controls { grid-column: 2; grid-row: 3; align-self: center ; background: blue}
+        #test {background: red;z-index:-1;}
+    </style>
+</head>
+<body>
+<div id="intro">Test passes if there is no red visible on the page.</div>
+<div id="grid">
+    <div id="test">test</div>
+    <div id="title">Game Title</div>
+    <div id="score">Score</div>
+    <div id="stats">Stats</div>
+    <div id="board">Board</div>
+    <div id="controls">Controls</div>
+</div>
+</body>
+</html>
