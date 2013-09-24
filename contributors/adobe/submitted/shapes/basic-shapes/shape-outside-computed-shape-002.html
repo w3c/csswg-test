@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shape Outside Basic Shape Computed Percentage Lengths</title>
+        <link rel="author" title="Adobe" href="http://html.adobe.com/">
+        <link rel="author" title="Bear Travis" href="mailto:betravis@adobe.com">
+        <link rel="help" href="http://dev.w3.org/csswg/css-shapes/#shape-outside-property">
+        <link rel="help" href="http://dev.w3.org/csswg/css-cascade/#computed">
+        <meta name="assert" content="The basic shape can contain percentages, which remain unchanged when computed">
+        <meta name="flags" content="DOM">
+        <script src="/resources/testharness.js"></script>
+        <script src="/resources/testharnessreport.js"></script>
+        <script src="resources/parsing-utils.js"></script>
+    </head>
+    <body>
+        <div id="log"></div>
+        <script type="text/javascript">
+            generate_tests(test_computed_style, [[
+                "rectangle", "rectangle(10%, 20%, 30%, 40%, 50%, 60%)"
+            ], [
+                "inset-rectangle", "inset-rectangle(10%, 20%, 30%, 40%, 50%, 60%)"
+            ], [
+                "circle", "circle(10%, 20%, 30%)"
+            ], [
+                "ellipse", "ellipse(10%, 20%, 30%, 40%)"
+            ], [
+                "polygon", "polygon(nonzero, 10% 20%, 30% 40%, 50% 60%)"
+            ]]);
+        </script>
+    </body>
+</html>

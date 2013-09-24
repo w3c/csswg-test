@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shape Outside Polygon Inline Style Arguments</title>
+        <link rel="author" title="Adobe" href="http://html.adobe.com/">
+        <link rel="author" title="Bear Travis" href="mailto:betravis@adobe.com">
+        <link rel="help" href="http://dev.w3.org/csswg/css-shapes/#polygon">
+        <meta name="assert" content="A polygonal basic shape has an optional fill-rule and one or more pairs of coordinates">
+        <meta name="flags" content="DOM">
+        <script src="/resources/testharness.js"></script>
+        <script src="/resources/testharnessreport.js"></script>
+        <script src="resources/parsing-utils.js"></script>
+    </head>
+    <body>
+        <div id="log"></div>
+        <script type="text/javascript">
+            generate_tests(test_inline_style, [
+                ["Too few points", "polygon()", null],
+                ["Clip-rule only is invalid", "polygon(evenodd)", null],
+                ["1 point only", "polygon(1px 2px)"],
+                ["Clip rule and point", "polygon(evenodd, 1px 2px)"],
+                ["Clip rule and multiple points", "polygon(nonzero, 1px 2px, 3px 4px)"],
+                ["Clip rule and multiple percentages", "polygon(evenodd, 1% 2%, 3% 4%)"],
+                ["No coordinates are paired", "polygon(1px, 2px, 3px, 4px)", null],
+                ["Not all coordinates are paired", "polygon(1px 2px, 3px)", null]
+            ]);
+        </script>
+    </body>
+</html>
