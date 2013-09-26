@@ -17,8 +17,8 @@
             generate_tests(test_approx_computed_style, [
                 ['width == height', 'circle(50%, 50%, 50%)', 'circle(50px, 50px, 50px)', { 'width' : '100px', 'height' : '100px' } ],
                 ['height > width', 'circle(50%, 50%, 50%', 'circle(50px, 100px, 158.11388px)', { 'width' : '100px', 'height' : '200px'} ],
-                ['width auto', 'circle(50%, 50%, 50%)', 'circle(0px, 50px, 70.711px)', { 'width: auto', 'display' : 'inline-block', 'height' : '100px' }],
-                ['height auto', 'circle(50%, 50%, 50%)', 'circle(50px, 0px, 70.711px)', { 'width: 100px', 'height' : 'auto' }]
+                ['width auto', 'circle(50%, 50%, 50%)', 'circle(0px, 50px, 70.711px)', { 'width' : 'auto', 'display' : 'inline-block', 'height' : '100px' }],
+                ['height auto', 'circle(50%, 50%, 50%)', 'circle(50px, 0px, 70.711px)', { 'width' : '100px', 'height' : 'auto' }]
             ]);
         </script>
     </body>
