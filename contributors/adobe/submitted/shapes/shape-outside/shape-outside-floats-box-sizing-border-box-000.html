@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<title>CSS Test: shape-outside on floats with box-sizing: border-box</title>
+<link rel="author" title="Adobe" href="http://html.adobe.com/">
+<link rel="author" title="Bem Jones-Bey" href="mailto:bjonesbe@adobe.com">
+<link rel="help" href="http://dev.w3.org/csswg/css-shapes-1/#relation-to-box-model-and-float-behavior">
+<meta name="assert" content="Test that a shape-inside is properly positioned and sized with box-sizing: border-box.">
+<link rel="match" href="shape-outside-floats-box-sizing-border-box-000-ref.html">
+<meta name="flags" content="ahem">
+<style>
+    .container {
+        font: 50px/1 Ahem;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        color: green;
+        display: inline-block;
+    }
+    .child {
+        box-sizing: border-box;
+        width: 50px;
+        height: 50px;
+        shape-outside: rectangle(0, 0, 100%, 100%);
+        border: 10px solid green;
+        background-color: green;
+    }
+    .left {
+        float: left;
+    }
+    .right {
+        float: right;
+    }
+</style>
+<body>
+    <p>You should see two green squares. You should not see any red.</p>
+    <div class="container">
+        <div class="child left"></div>
+        X
+        XX
+    </div>
+    <div class="container">
+        <div class="child right"></div>
+        X
+        XX
+    </div>
+</body>
