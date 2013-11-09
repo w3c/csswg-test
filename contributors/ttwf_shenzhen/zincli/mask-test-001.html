@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS3 mask-clip test</title>
+    <link rel="author" title="zincli"
+          href="mailto:zinc_li@163.com">
+    <link rel="help"
+          href="http://www.w3.org/TR/css-masking/#propdef-mask-clip">
+    <meta name="assert"
+          content="BDO element's DIR content attribute renders corrently
+                   given value of "rtl".">
+    <link rel="match" href="TEMPLATE-REFTEST-001.html">
+
+    <style>
+        section{margin-bottom: 30px;}
+        p{margin: 10px 0;}
+        .mask-container, .mask{
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            border: 5px solid green;
+            background-color: green;
+        }
+        .mask-container{
+            position: relative;
+            background-color: yellow;border-color: blue;
+        }
+        .mask{
+            position: absolute;
+            left: -5px;
+            top: -5px;
+            -webkit-mask-image: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%);
+            -webkit-mask-size: 100% 100%;
+            -webkit-mask-repeat: no-repeat;
+        }
+        #border-box{
+            -webkit-mask-clip: border-box;
+        }
+        #padding-box{
+            -webkit-mask-clip: padding-box;
+        }
+        #content-box{
+            -webkit-mask-clip: content-box;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <p>with <code>mask-clip: border-box;</code>, this div should all green.</p>
+
+    <div class="mask-container">
+        <div id="border-box" class="mask"></div>
+    </div>
+</section>
+
+<section>
+    <p>with <code>mask-clip: padding-box;</code>, this div should have 5px width blue border.</p>
+
+    <div class="mask-container">
+        <div id="padding-box" class="mask"></div>
+    </div>
+</section>
+
+<section>
+    <p>with <code>mask-clip: content-box;</code>, this div should have 5px border and 10px width yellow padding.</p>
+
+    <div class="mask-container">
+        <div id="content-box" class="mask"></div>
+    </div>
+</section>
+</body>
+</html>
