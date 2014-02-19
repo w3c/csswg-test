@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shape Outside Inset Valid Round Length Units</title>
+        <link rel="author" title="Adobe" href="http://html.adobe.com/">
+        <link rel="author" title="Rebecca Hauck" href="mailto:rhauck@adobe.com">
+        <link rel="help" href="http://www.w3.org/TR/css-shapes/#funcdef-inset">
+        <link rel="help" href="http://www.w3.org/TR/css3-values/#lengths">
+        <meta name="assert" content="An inset's radial component's values can be in any length unit">
+        <meta name="flags" content="DOM">
+        <script src="/resources/testharness.js"></script>
+        <script src="/resources/testharnessreport.js"></script>
+        <script src="../resources/parsing-utils.js"></script>
+    </head>
+    <body>
+        <div id="log"></div>
+        <script type="text/javascript">
+            // Absolute length units
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.generateInsetRoundCases('cm'));
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.generateInsetRoundCases('mm'));
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.generateInsetRoundCases('in'));
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.generateInsetRoundCases('pt'));
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.generateInsetRoundCases('pc'));
+            // Viewport percentage units
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.generateInsetRoundCases('vw'));
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.generateInsetRoundCases('vh'));
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.generateInsetRoundCases('vmin'));
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.generateInsetRoundCases('vmax'));
+            // Font relative units
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.generateInsetRoundCases('em'));
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.generateInsetRoundCases('ex'));
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.generateInsetRoundCases('ch'));
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.generateInsetRoundCases('rem'));
+        </script>
+    </body>
+</html>

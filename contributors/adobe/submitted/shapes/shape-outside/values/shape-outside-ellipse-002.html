@@ -4,8 +4,11 @@
         <title>Shape Outside Ellipse Valid Positions</title>
         <link rel="author" title="Adobe" href="http://html.adobe.com/">
         <link rel="author" title="Bear Travis" href="mailto:betravis@adobe.com">
+        <link rel="author" title="Rebecca Hauck" href="mailto:rhauck@adobe.com">
         <link rel="help" href="http://www.w3.org/TR/css-shapes/#funcdef-ellipse">
-        <meta name="assert" content="A ellipse's position argument may be any of valid keyword/length/percentage combinations allowed by a <position> value">
+        <link rel="help" href="http://www.w3.org/TR/css3-values/#lengths">
+        <meta name="assert" content="A ellipse's position argument may be any of valid keyword/length/percentage combinations
+                                     in any valid <length> unit allowed by a <position> value">
         <meta name="flags" content="DOM">
         <script src="/resources/testharness.js"></script>
         <script src="/resources/testharnessreport.js"></script>
@@ -14,8 +17,23 @@
     <body>
         <div id="log"></div>
         <script type="text/javascript">
-             generate_tests( ParsingUtils.testInlineStyle,
-                             ParsingUtils.buildEllipsoidTests("ellipse", ParsingUtils.serializedEllipsoids) );
+            // Absolute length units
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.buildEllipsoidTests("ellipse", "valid", "px"));
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.buildEllipsoidTests("ellipse", "valid", "cm"));
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.buildEllipsoidTests("ellipse", "valid", "mm"));
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.buildEllipsoidTests("ellipse", "valid", "in"));
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.buildEllipsoidTests("ellipse", "valid", "pt"));
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.buildEllipsoidTests("ellipse", "valid", "pc"));
+            // Font relative units
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.buildEllipsoidTests("ellipse", "valid", "em"));
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.buildEllipsoidTests("ellipse", "valid", "ex"));
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.buildEllipsoidTests("ellipse", "valid", "ch"));
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.buildEllipsoidTests("ellipse", "valid", "rem"));
+            // Absolute length units
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.buildEllipsoidTests("ellipse", "valid", "vw"));
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.buildEllipsoidTests("ellipse", "valid", "vh"));
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.buildEllipsoidTests("ellipse", "valid", "vmin"));
+            generate_tests(ParsingUtils.testInlineStyle, ParsingUtils.buildEllipsoidTests("ellipse", "valid", "vmax"));
         </script>
     </body>
 </html>
