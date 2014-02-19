@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shape Outside Circle Invalid Positions</title>
+        <link rel="author" title="Adobe" href="http://html.adobe.com/">
+        <link rel="author" title="Bear Travis" href="mailto:betravis@adobe.com">
+        <link rel="author" title="Rebecca Hauck" href="mailto:rhauck@adobe.com">
+        <link rel="help" href="http://www.w3.org/TR/css-shapes/#funcdef-circle">
+        <link rel="help" href="http://www.w3.org/TR/css3-values/#lengths">
+        <meta name="assert" content="A circle's position argument may be any of the valid keyword/length/percentage combinations
+                                     in any valid <length> unit allowed by a <position> value.">
+        <meta name="flags" content="DOM">
+        <script src="/resources/testharness.js"></script>
+        <script src="/resources/testharnessreport.js"></script>
+        <script src="../resources/parsing-utils.js"></script>
+    </head>
+    <body>
+        <div id="log"></div>
+        <script type="text/javascript">
+            generate_tests(
+                ParsingUtils.testInlineStyle,
+                ParsingUtils.buildEllipsoidTests("circle", "invalid", "px")
+            );
+        </script>
+    </body>
+</html>
