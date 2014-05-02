@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>CSS Writing Modes Test: text baseline alignment - plain text (central alignment with vertical layout)</title>
+    <link rel="author" title="Hajime Shiozawa" href="mailto:hajime.shiozawa@gmail.com" />
+    <link rel="help" title="4.2. Text Baseline" href="http://www.w3.org/TR/css3-writing-modes/#text-baselines" />
+    <link rel="match" href="text-baseline-003-ref.xht" />
+    <meta name="assert" content="This test checks the generation of text baseline. When 'writing-mode' is vertical and 'text-orientation' is 'mixed', then the central baseline is used as the dominant baseline." />
+    <meta name="flags" content="ahem image" />
+    <style type="text/css"><![CDATA[
+      div > p {
+        margin: 0;
+        font: 40px/1 "Ahem";
+      }
+      img {
+        margin-top: -200px;
+      }
+
+      /* writing-mode property */
+      .vertical-rl {
+        writing-mode: vertical-rl;
+      }
+
+      /* text-orientation property */
+      .mixed {
+        text-orientation: mixed;
+      }
+  ]]></style>
+  </head>
+  <body>
+    <p>Test passes if a thin blue line is centered in the black rectangle</p>
+    <div class="vertical-rl">
+      <p class="mixed">OriMix<img src="./support/blue-vert-line-1x220.png" alt="Image download support must be enabled" /></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>CSS Reftest Reference</title>
+    <link rel="author" title="Hajime Shiozawa" href="mailto:hajime.shiozawa@gmail.com" />
+    <style type="text/css"><![CDATA[
+      div {
+        width: 40px;
+        text-align: center;
+      }
+      div > p {
+        margin: 0;
+        font: 40px/1 "Ahem";
+      }
+      img {
+        position: relative;
+        top: -200px;
+      }
+  ]]></style>
+  </head>
+  <body>
+    <p>Test passes if a thin blue line is centered in the black rectangle</p>
+    <div>
+      <p>A<br/>A<br/>A<br/>A<br/>A<br/>A<br/><img src="./support/blue-vert-line-1x220.png" alt="Image download support must be enabled" /></p>
+    </div>
+  </body>
+</html>
