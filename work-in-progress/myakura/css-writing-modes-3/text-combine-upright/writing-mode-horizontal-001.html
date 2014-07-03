@@ -8,6 +8,10 @@
 <link rel="match" href="writing-mode-horizontal-001-ref.html">
 <meta name="assert" content="text-combine-upright does not have an effect in horizontal writing modes.">
 <style>
+div p {
+  font-size: 50px;
+}
+
 .horizontal-tb {
   writing-mode: horizontal-tb;
 }
@@ -19,11 +23,11 @@
 </head>
 <body>
 
-<p>Test passes if the following paragraphs are identical:</p>
+<p>Test passes if the following texts are identical:</p>
 
 <div class="horizontal-tb">
-  <p>平成<span class="tcu-all">26</span>年</p>
-  <p>平成26年</p>
+  <p><span class="tcu-all">2014</span></p>
+  <p>2014</p>
 </div>
 
 </body>
