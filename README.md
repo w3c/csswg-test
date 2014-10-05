@@ -1,5 +1,6 @@
 W3C CSS Test Suite Repository
 -----------------------------
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/w3c/csswg-test?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
  
 This repository contains top level directories for all of CSS specs for
 which we currently have tests. Place tests in the appropriate directory based
