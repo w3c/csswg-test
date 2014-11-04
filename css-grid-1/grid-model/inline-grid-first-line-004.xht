@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>CSS Grid Layout: '::first-line' works on grid items within an inline grid</title>
+        <link rel="author" title="Manuel Rego Casasnovas" href="mailto:rego@igalia.com" />
+        <link rel="help" href="http://www.w3.org/TR/css-grid-1/#grid-containers" />
+        <link rel="help" href="http://www.w3.org/TR/css3-selectors/#first-formatted-line" />
+        <link rel="match" href="../reference/ref-this-text-should-be-green.xht" />
+        <meta name="assert" content="This test checks that '::first-line' pseudo-element works as expected if it is applied directly to a grid item within an inline grid." />
+        <style>
+            .grid {
+                display: inline-grid;
+                color: red;
+            }
+
+            .item::first-line {
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div class="item">
+                <p>This text should be green.</p>
+            </div>
+        </div>
+    </body>
+</html>
