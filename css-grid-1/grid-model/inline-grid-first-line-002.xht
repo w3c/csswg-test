@@ -9,7 +9,7 @@
         <link rel="match" href="../reference/ref-this-text-should-be-green.xht" />
         <meta name="assert" content="This test checks that '::first-line' pseudo-element is ignored in anonymous grid items when applied to an inline grid container ancestors." />
         <style>
-            .grid {
+            .inline-grid {
                 display: inline-grid;
                 color: green;
             }
@@ -20,7 +20,7 @@
         </style>
     </head>
     <body>
-        <div class="grid">
+        <div class="inline-grid">
             <div>
                 <p>This text should be green.</p>
             </div>
