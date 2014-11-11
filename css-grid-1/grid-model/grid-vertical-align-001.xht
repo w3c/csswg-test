@@ -1,14 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <meta charset="utf-8" />
-        <title>CSS Grid Layout: 'vertical-align' has no effect on a grid item</title>
+        <title>CSS Grid Layout Test: 'vertical-align' has no effect on a grid item</title>
         <link rel="author" title="Manuel Rego Casasnovas" href="mailto:rego@igalia.com" />
-        <link rel="help" href="http://www.w3.org/TR/css-grid-1/#grid-containers" />
-        <link rel="help" href="http://www.w3.org/TR/CSS21/visudet.html#propdef-vertical-align" />
+        <link rel="help" href="http://www.w3.org/TR/css-grid-1/#grid-containers" title="3.1 Establishing Grid Containers" />
+        <link rel="help" href="http://www.w3.org/TR/CSS21/visudet.html#propdef-vertical-align" title="10.8.1 Leading and half-leading" />
         <link rel="match" href="../reference/ref-filled-green-100px-square.xht" />
         <meta name="assert" content="This test checks that 'vertical-align' is ignored in grid items." />
-        <style>
+        <style type="text/css"><![CDATA[
             #reference-overlapped-red {
                 position: absolute;
                 background-color: red;
@@ -21,7 +20,7 @@
                 display: grid;
             }
 
-            .inline-block-overlapping-green {
+            .test-inline-block-overlapping-green {
                 display: inline-block;
                 background-color: green;
                 width: 100px;
@@ -31,7 +30,7 @@
             .vertical-align {
                 vertical-align: 125px;
             }
-        </style>
+        ]]></style>
     </head>
     <body>
         <p>Test passes if there is a filled green square and <strong>no red</strong>.</p>
@@ -39,8 +38,8 @@
         <div id="reference-overlapped-red"></div>
 
         <div class="grid">
-            <div class="inline-block-overlapping-green"></div>
-            <div class="inline-block-overlapping-green vertical-align"></div>
+            <div class="test-inline-block-overlapping-green"></div>
+            <div class="test-inline-block-overlapping-green vertical-align"></div>
         </div>
     </body>
 </html>
