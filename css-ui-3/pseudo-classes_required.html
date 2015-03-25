@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>CSS Basic User Interface Test: pseudo-classes_required</title>
+<link rel="author" title="Intel" href="http://www.intel.com" />
+<link rel="help" href="http://www.w3.org/TR/2012/WD-css3-ui-20120117" />
+<link rel="match" href="reference/pseudo-classes_required-ref.html">
+<meta name="flags" content="" />
+<meta name="assert" content="Check if form element required property value is required" />
+<style type="text/css">
+    .test {
+        border: 1px solid black;
+    }
+    .test:required {
+        background: #f6f6f6;
+        color: red;
+        border: 1px solid red;
+        outline: none;
+    }
+</style>
+<body>
+  <input type="text" class="test" value="1"></input><br>
+  <input type="text" class="test" value="2" required="true"></input><br>
+  <div>PASS: the second input box border and font color is red</div>
+  <div>FAIL: the second input box border and font color is black</div>
+</body>
