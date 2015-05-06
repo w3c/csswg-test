@@ -35,12 +35,12 @@
 <body>
   <p>
     Test passes if there is a filled square,
-    which moves from right to left three times; the first time with number 0,
-    the second time with number 1, the third time wiht number 2.
+    which moves from right to left three times; the first time with number 1,
+    the second time with number 2, the third time wiht number 3.
   </p>
   <div></div>
   <script>
-    var count = 0;
+    var count = 1;
     var div = document.getElementsByTagName("div");
     div[0].innerHTML = count;
     div[0].addEventListener("animationiteration", animationIteration, true);
