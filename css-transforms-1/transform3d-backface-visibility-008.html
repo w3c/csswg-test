@@ -3,6 +3,7 @@
 <title>CSS Transforms Test: backface-visibility - visible</title>
 <link rel="author" title="Intel" href="http://www.intel.com">
 <link rel="help" href="http://www.w3.org/TR/css-transforms-1/#backface-visibility-property">
+<link rel="match" href="filled-green-100px-square-ref.html">
 <meta name="assert" content="When 'backface-visiblity' is set to visible,
                              the back side of a transformed element is visible.">
 <style>
@@ -16,13 +17,13 @@
   }
 
   div > div {
-    background: lime;
+    background: green;
     backface-visibility: visible;
     transform: rotateY(180deg);
   }
 </style>
 <body>
-  <p>Test passes if there is a filled lime square and no red.</p>
+  <p>Test passes there is a green filled square, no red.</p>
   <div>
     <div></div>
   </div>
