@@ -1,0 +1,1944 @@
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_normal_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_normal_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_normal_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_normal_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_normal_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_normal_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_normal_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_normal_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_normal_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: oblique;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_oblique_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: oblique;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_oblique_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: oblique;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_oblique_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: oblique;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_oblique_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: oblique;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_oblique_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: oblique;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_oblique_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: oblique;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_oblique_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: oblique;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_oblique_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: oblique;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_oblique_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: italic;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_italic_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: italic;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_italic_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: italic;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_italic_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: italic;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_italic_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: italic;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_italic_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: italic;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_italic_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: italic;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_italic_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: italic;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_italic_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: normal;
+    font-style: italic;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_normal_italic_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: normal;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_normal_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: normal;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_normal_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_normal_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_normal_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_normal_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_normal_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_normal_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_normal_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_normal_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: oblique;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_oblique_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: oblique;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_oblique_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: oblique;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_oblique_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: oblique;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_oblique_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: oblique;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_oblique_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: oblique;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_oblique_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: oblique;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_oblique_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: oblique;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_oblique_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: oblique;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_oblique_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: italic;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_italic_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: italic;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_italic_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: italic;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_italic_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: italic;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_italic_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: italic;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_italic_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: italic;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_italic_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: italic;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_italic_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: italic;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_italic_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-condensed;
+    font-style: italic;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultracondensed_italic_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: normal;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_normal_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: normal;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_normal_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_normal_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_normal_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_normal_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_normal_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_normal_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_normal_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_normal_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: oblique;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_oblique_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: oblique;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_oblique_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: oblique;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_oblique_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: oblique;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_oblique_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: oblique;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_oblique_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: oblique;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_oblique_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: oblique;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_oblique_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: oblique;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_oblique_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: oblique;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_oblique_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: italic;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_italic_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: italic;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_italic_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: italic;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_italic_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: italic;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_italic_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: italic;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_italic_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: italic;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_italic_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: italic;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_italic_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: italic;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_italic_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-condensed;
+    font-style: italic;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extracondensed_italic_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: normal;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_normal_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: normal;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_normal_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_normal_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_normal_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_normal_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_normal_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_normal_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_normal_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_normal_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: oblique;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_oblique_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: oblique;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_oblique_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: oblique;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_oblique_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: oblique;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_oblique_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: oblique;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_oblique_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: oblique;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_oblique_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: oblique;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_oblique_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: oblique;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_oblique_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: oblique;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_oblique_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: italic;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_italic_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: italic;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_italic_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: italic;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_italic_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: italic;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_italic_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: italic;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_italic_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: italic;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_italic_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: italic;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_italic_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: italic;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_italic_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: condensed;
+    font-style: italic;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_condensed_italic_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: normal;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_normal_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: normal;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_normal_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_normal_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_normal_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_normal_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_normal_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_normal_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_normal_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_normal_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: oblique;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_oblique_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: oblique;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_oblique_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: oblique;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_oblique_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: oblique;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_oblique_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: oblique;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_oblique_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: oblique;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_oblique_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: oblique;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_oblique_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: oblique;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_oblique_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: oblique;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_oblique_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: italic;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_italic_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: italic;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_italic_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: italic;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_italic_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: italic;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_italic_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: italic;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_italic_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: italic;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_italic_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: italic;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_italic_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: italic;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_italic_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-condensed;
+    font-style: italic;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semicondensed_italic_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: normal;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_normal_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: normal;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_normal_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_normal_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_normal_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_normal_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_normal_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_normal_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_normal_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_normal_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: oblique;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_oblique_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: oblique;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_oblique_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: oblique;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_oblique_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: oblique;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_oblique_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: oblique;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_oblique_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: oblique;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_oblique_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: oblique;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_oblique_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: oblique;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_oblique_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: oblique;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_oblique_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: italic;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_italic_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: italic;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_italic_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: italic;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_italic_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: italic;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_italic_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: italic;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_italic_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: italic;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_italic_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: italic;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_italic_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: italic;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_italic_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: semi-expanded;
+    font-style: italic;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_semiexpanded_italic_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: normal;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_normal_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: normal;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_normal_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_normal_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_normal_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_normal_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_normal_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_normal_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_normal_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_normal_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: oblique;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_oblique_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: oblique;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_oblique_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: oblique;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_oblique_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: oblique;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_oblique_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: oblique;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_oblique_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: oblique;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_oblique_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: oblique;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_oblique_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: oblique;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_oblique_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: oblique;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_oblique_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: italic;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_italic_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: italic;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_italic_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: italic;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_italic_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: italic;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_italic_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: italic;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_italic_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: italic;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_italic_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: italic;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_italic_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: italic;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_italic_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: expanded;
+    font-style: italic;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_expanded_italic_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: normal;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_normal_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: normal;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_normal_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_normal_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_normal_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_normal_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_normal_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_normal_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_normal_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_normal_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: oblique;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_oblique_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: oblique;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_oblique_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: oblique;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_oblique_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: oblique;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_oblique_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: oblique;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_oblique_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: oblique;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_oblique_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: oblique;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_oblique_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: oblique;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_oblique_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: oblique;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_oblique_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: italic;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_italic_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: italic;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_italic_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: italic;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_italic_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: italic;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_italic_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: italic;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_italic_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: italic;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_italic_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: italic;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_italic_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: italic;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_italic_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: extra-expanded;
+    font-style: italic;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_extraexpanded_italic_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: normal;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_normal_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: normal;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_normal_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_normal_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_normal_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_normal_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_normal_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_normal_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_normal_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_normal_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: oblique;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_oblique_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: oblique;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_oblique_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: oblique;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_oblique_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: oblique;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_oblique_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: oblique;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_oblique_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: oblique;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_oblique_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: oblique;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_oblique_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: oblique;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_oblique_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: oblique;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_oblique_ninehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: italic;
+    font-weight: 100;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_italic_onehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: italic;
+    font-weight: 200;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_italic_twohundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: italic;
+    font-weight: 300;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_italic_threehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: italic;
+    font-weight: 400;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_italic_fourhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: italic;
+    font-weight: 500;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_italic_fivehundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: italic;
+    font-weight: 600;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_italic_sixhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: italic;
+    font-weight: 700;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_italic_sevenhundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: italic;
+    font-weight: 800;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_italic_eighthundred.ttf");
+}
+
+@font-face {
+    font-family: CSSMatchingTest;
+    font-stretch: ultra-expanded;
+    font-style: italic;
+    font-weight: 900;
+    src: url("../fonts/matchingtest/CSSMatchingTest_ultraexpanded_italic_ninehundred.ttf");
+}
+
