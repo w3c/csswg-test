@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="reftest-wait">
+<head>
+    <meta charset="utf-8">
+    <title>CSS Test: Table Layout and Viewport Resizing</title>
+    <link rel="author" title="Chris Rebert" href="http://chrisrebert.com">
+    <link rel="help" href="https://drafts.csswg.org/css2/tables.html#auto-table-layout">
+    <link rel="help" href="https://drafts.csswg.org/mediaqueries-3/#width">
+    <link rel="help" href="https://drafts.csswg.org/mediaqueries-4/#width">
+    <link rel="match" href="min-width-tables-001-ref.html">
+    <meta name="flags" content="dom">
+    <meta name="assert" content="Resizing a page which toggles the `display` of elements between `block` and `table-cell` based on the viewport width should not cause unnecessary wrapping of the table.">
+    <style>
+iframe {
+    border-color: fuchsia;
+    border-style: solid;
+    border-width: 1px;
+}
+    </style>
+</head>
+<body>
+    <!-- See min-width-tables-001-iframe.html for the derivation of the 132px value -->
+    <!-- 200px > 132px -->
+    <iframe id="toy" width="200" height="100" src="min-width-tables-001-iframe.html"></iframe>
+    <p>Test passes if there is a solid green rectangle within a fuchsia-bordered rectangle, and <strong>no red</strong>.</p>
+    <!-- This test is not about iframes specifically. It's just that resizing an iframe is more reliable than resizing the window, given browser security restrictions. -->
+    <script>
+    window.addEventListener('load', function () {
+        var PAINT_MS = 250;/* Assume the browser takes about this long to layout/paint this whole page */
+        var iframe = document.getElementById('toy');
+        window.setTimeout(function () {
+            iframe.width = 64;/* <132px ; toggle media query off */
+            window.setTimeout(function () {
+                iframe.width = 200;/* >132px ; toggle media query on; back to initial width */
+                // Take the reftest screenshot after the last relayout/repaint finishes
+                window.setTimeout(function () {
+                    document.documentElement.className = '';
+                }, PAINT_MS);
+            }, PAINT_MS);
+        }, PAINT_MS);
+    }, false);
+    </script>
+</body>
+</html>
