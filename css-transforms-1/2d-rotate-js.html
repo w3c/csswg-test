@@ -26,15 +26,10 @@
 			(function(){
 				var box = document.getElementById("box"),
 					assertion = "",
-					expectation = "rotate(30deg)",
-					should_string = "this should make a small green square rotated 30 degrees, and the browser should return the rotation as 30 degrees as the computed value NOT a matrix",
-					extra_properties = null,
-					computed_angle = 0,
-					a_1 = "";
-					a_2 = "",
-					my_value = "",
+					expectation = "matrix(0.866025403784439, 0.5, -0.5, 0.866025403784439, 0, 0)",
+					should_string = "this should make a small green square rotated 30 degrees, and the browser should return the rotation as 30 degrees as the computed value for a matrix",
 					test_function = {};
-				box.style.Transform = "rotate(30deg)";
+				box.style.transform = "rotate(30deg)";
 				assertion = window.getComputedStyle(box).getPropertyValue("transform");
 				test_function = function(){
 					assert_equals(assertion, expectation);
