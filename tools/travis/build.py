@@ -1,3 +1,4 @@
+import glob
 import os
 import shutil
 import subprocess
@@ -15,10 +16,19 @@ local_files = ["manifest", "serve", "serve.py", ".gitmodules", "tools", "resourc
                "config.default.json"]
 
 def fetch_submodules():
-    hg = vcs.hg
+    tools_dir = os.path.join(source_dir, "tools")
     for tool in ["apiclient", "w3ctestlib"]:
-        hg("clone", "https://hg.csswg.org/dev/%s" % tool,
-           os.path.join(source_dir, "tools", tool))
+        tgz_url = "https://hg.csswg.org/dev/%s/archive/tip.tar.gz" % tool
+        tool_tgz = os.path.join(tools_dir, ("%s.tar.gz" % tool))
+        subprocess.check_call(["curl", "-o", tool_tgz, tgz_url])
+
+        subprocess.check_call(["tar", "xzf", tool_tgz], cwd=tools_dir)
+        os.remove(tool_tgz)
+
+        # hg tarballs result in a single directory named e.g. apiclient-38b262e4e153
+        tool_dir = os.path.join(tools_dir, tool)
+        tool_with_hash_dir = glob.glob(os.path.join(tools_dir, ("%s-*" % tool)))[0]
+        os.rename(tool_with_hash_dir, tool_dir)
 
 def update_dist():
     if not os.path.exists(built_dir) or not vcs.is_git_root(built_dir):
