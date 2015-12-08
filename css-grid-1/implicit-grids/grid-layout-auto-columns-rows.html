@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Grid Layout Test: auto columns/rows</title>
+        <link rel="help" href="http://www.w3.org/TR/css-grid-1/#auto-tracks">
+        <link rel="match" href="../reference/grid-layout-auto-columns-rows-reference.html">
+        <link rel="author" title="jxs" href="mailto:hello@jxs.pt"/>
+        <meta name="assert" content="the layout should behave the same as reference.">
+        <style type="text/css">
+         #grid {
+             display: grid;
+             grid-auto-columns: 30px;
+             grid-auto-rows: 30px;
+         }
+         #A {
+             grid-column: 1;
+             grid-row: 1;
+             background-color: purple;
+         }
+         #B {
+             grid-column: 3;
+             grid-row: 1 / span 2;
+             background-color: orange
+         }
+         #C {
+             grid-column: 1 / span 2;
+             grid-row: 2;
+             background-color: blue;
+         }
+        </style>
+    </head>
+    <body>
+        The test passes if it has the same visual effect as reference.
+        <div id="grid">
+            <div id="A">A</div>
+            <div id="B">B</div>
+            <div id="C">C</div>
+        </div>
+    </body>
+</html>

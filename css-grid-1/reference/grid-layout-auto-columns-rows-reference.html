@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Grid Layout Test: auto columns/rows</title>
+        <link rel="author" title="jxs" href="mailto:hello@jxs.pt"/>
+        <style type="text/css">
+         #grid {
+             position: relative;
+         }
+         .position {
+             position: absolute;
+             top: 0;
+             left: 0;
+         }
+         #A {
+             width: 30px;
+             height: 30px;
+             background-color: purple;
+         }
+         #B {
+             left: 60px;
+             width: 30px;
+             height: 60px;
+             background-color: orange
+         }
+         #C {
+             top: 30px;
+             width: 60px;
+             height: 30px;
+             background-color: blue;
+         }
+        </style>
+    </head>
+    <body>
+        The test passes if it has the same visual effect as reference.
+        <div id="grid">
+            <div class="position" id="A">A</div>
+            <div class="position" id="B">B</div>
+            <div class="position" id="C">C</div>
+        </div>
+    </body>
+</html>
