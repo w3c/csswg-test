@@ -1,19 +1,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
     <title>CSS 2.1 Test Suite: @charset</title>
     <link href="mailto:bzbarsky@mit.edu" rel="author" title="Boris Zbarsky" />
     <link href="http://mozilla.com/" rel="author" title="Mozilla Corporation" />
-    <link href="http://www.w3.org/TR/CSS21/syndata.html#charset" rel="help" />
-    <link rel="match" href="pass.xht"/>
+    <link href="https://drafts.csswg.org/css2/syndata.html#charset" rel="help" />
+    <link href="https://drafts.csswg.org/css-syntax-3/#input-byte-stream" rel="help" />
+    <link rel="match" href="../reference/ref-this-text-should-be-green.xht" />
     <meta content="" name="flags" />
+    <meta name="assert" content="The UTF-16BE BOM should override any other encoding information." />
     <style type="text/css">
-      body { color: green; }
+      body { color: red; }
     </style>
     <link charset="us-ascii" href="test-charset-utf-16-be-bom.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    This should be green
-  
-
-  
-</body></html>
+    This text should be green.
+  </body>
+</html>
