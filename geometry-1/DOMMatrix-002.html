@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>Geometry Interfaces: DOMMatrixReadOnly methods do not mutate the object</title>
-    <link rel="help" href="https://www.w3.org/TR/geometry-1/#dom-dommatrixreadonly">>
+    <link href="mailto:peter.hall@algomi.com" rel="author" title="Peter Hall">
+    <link rel="help" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly">
     <script src="/resources/testharness.js"></script>
     <script src="/resources/testharnessreport.js"></script>
 </head>
@@ -12,17 +13,15 @@
     <script>
 
         function initialMatrix(){
-          var matrix = new DOMMatrixReadOnly();
-          var initial = {m11:1,   m12:-0.5, m13: 0.5,  m14:0,
-                         m21:0.5, m22:2,    m23: -0.5, m24:0,
-                         m31:0,   m32:0,    m33: 1,    m34:0,
-                         m41:0,   m42:0,    m43: 0,    m44:1,
-                         is2D: false,
-                         isIdentity:false };
-          for(var p in initial) {
-            matrix[p] = initial[p];
-          }
-          return matrix;
+          return DOMMatrixReadOnly.fromMatrix(
+            {
+              m11:1,   m12:-0.5, m13: 0.5,  m14:0,
+              m21:0.5, m22:2,    m23: -0.5, m24:0,
+              m31:0,   m32:0,    m33: 1,    m34:0,
+              m41:0,   m42:0,    m43: 0,    m44:1,
+              is2D: false
+            }
+          );
         }
 
         test(function() {
