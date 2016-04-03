@@ -118,7 +118,7 @@ def remove_current_files():
 def copy_files():
     dist_path = os.path.join(source_dir, "dist")
     for node in os.listdir(dist_path):
-        src_path = os.path.join(dir_name, node)
+        src_path = os.path.join(dist_path, node)
         dest_path = os.path.join(built_dir, node)
         if os.path.isdir(src_path):
             shutil.copytree(src_path, dest_path)
