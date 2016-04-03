@@ -106,10 +106,10 @@ def build_tests():
                            cwd=source_dir)
 
 def remove_current_files():
-    for node in os.listdir(build_dir):
+    for node in os.listdir(built_dir):
         if node.startswith(".git"):
             continue
-        path = os.path.join(build_dir, node)
+        path = os.path.join(built_dir, node)
         if os.path.isdir(path):
             shutil.rmtree(path)
         else:
