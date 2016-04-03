@@ -5,5 +5,3 @@ cache:
   directories:
     - tools/apiclient
     - tools/w3ctestlib
-    - tools/travis/css-test-built
-    - tools/travis/_virtualenv
