@@ -73,6 +73,7 @@ def update_dist():
     git = vcs.bind_to_repo(vcs.git, built_dir)
     git("config", "user.email", "CssBuildBot@users.noreply.github.com")
     git("config", "user.name", "CSS Build Bot")
+    git("submodule", "update", "--init", "--recursive")
 
 def setup_virtualenv():
     virtualenv_path = os.path.join(here, "_virtualenv")
