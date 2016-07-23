@@ -86,6 +86,7 @@ def setup_virtualenv():
     execfile(activate_path, dict(__file__=activate_path))
 
     subprocess.check_call(["pip", "install", "mercurial"])
+    subprocess.check_call(["pip", "install", "setuptools==18.5"])
     subprocess.check_call(["pip", "install", "html5lib"])
     subprocess.check_call(["pip", "install", "lxml"])
     subprocess.check_call(["pip", "install", "Template-Python"])
