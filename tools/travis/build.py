@@ -87,7 +87,7 @@ def setup_virtualenv():
 
     subprocess.check_call(["pip", "install", "mercurial"])
     subprocess.check_call(["pip", "install", "setuptools==18.5"])
-    subprocess.check_call(["pip", "install", "html5lib"])
+    subprocess.check_call(["pip", "install", "html5lib==0.9999999"])
     subprocess.check_call(["pip", "install", "lxml"])
     subprocess.check_call(["pip", "install", "Template-Python"])
 
