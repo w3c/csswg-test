@@ -85,10 +85,11 @@ def setup_virtualenv():
 
     execfile(activate_path, dict(__file__=activate_path))
 
-    subprocess.check_call(["pip", "-q", "install", "mercurial"])
-    subprocess.check_call(["pip", "-q", "install", "html5lib"])
-    subprocess.check_call(["pip", "-q", "install", "lxml"])
-    subprocess.check_call(["pip", "-q", "install", "Template-Python"])
+    subprocess.check_call(["pip", "install", "mercurial"])
+    subprocess.check_call(["pip", "install", "setuptools==18.5"])
+    subprocess.check_call(["pip", "install", "html5lib==0.9999999"])
+    subprocess.check_call(["pip", "install", "lxml"])
+    subprocess.check_call(["pip", "install", "Template-Python"])
 
 
 def update_to_changeset(changeset):
