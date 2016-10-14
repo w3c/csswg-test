@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<meta charset="utf-8">
+<title>Reference File for line breaking tests using ideographic caracters</title>
+<link rel=author title="Florian Rivoal" href="http://florian.rivoal.net">
+<!--
+	This is reference is theoretically identical to line-breaking-001.html,
+	but is needed nonetheless due to difference in anti-aliasing / font rendering.
+-->
+<style>
+div {
+    color: green;
+    background :green;
+    line-height: 1em;
+    width: 1em;
+    font-size: 20px;
+}
+</style>
+<body>
+    <p>There should be a green rectangle and no red.</p>
+    <div>口<br>口</div>
+</body>
+</html>
