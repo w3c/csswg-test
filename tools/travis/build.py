@@ -73,6 +73,7 @@ def update_dist():
     git = vcs.bind_to_repo(vcs.git, built_dir)
     git("config", "user.email", "CssBuildBot@users.noreply.github.com")
     git("config", "user.name", "CSS Build Bot")
+    git("submodule", "update", "--init", "--recursive")
 
 def setup_virtualenv():
     virtualenv_path = os.path.join(here, "_virtualenv")
@@ -85,7 +86,7 @@ def setup_virtualenv():
     execfile(activate_path, dict(__file__=activate_path))
 
     subprocess.check_call(["pip", "-q", "install", "mercurial"])
-    subprocess.check_call(["pip", "-q", "install", "html5lib"])
+    subprocess.check_call(["pip", "-q", "install", "html5lib==0.9999999"])
     subprocess.check_call(["pip", "-q", "install", "lxml"])
     subprocess.check_call(["pip", "-q", "install", "Template-Python"])
 
@@ -102,6 +103,10 @@ def remove_current_files():
     for node in os.listdir(built_dir):
         if node.startswith(".git"):
             continue
+
+        if node in ("resources", "tools"):
+            continue
+
         path = os.path.join(built_dir, node)
         if os.path.isdir(path):
             shutil.rmtree(path)
@@ -144,8 +149,15 @@ def get_new_commits():
     with open(commit_path) as f:
         prev_commit = f.read().strip()
 
-    merge_base = git("merge-base", prev_commit, os.environ['TRAVIS_COMMIT']).strip()
-    commit_range = "%s..%s" % (merge_base, os.environ['TRAVIS_COMMIT'])
+    if git("rev-parse", "--revs-only", prev_commit).strip() != prev_commit:
+        # we don't have prev_commit in current tree, so let's just do what's new
+        commit_range = os.environ['TRAVIS_COMMIT_RANGE']
+        assert (os.environ["TRAVIS_PULL_REQUEST"] != "false" or
+                os.environ["TRAVIS_BRANCH"] != "master")
+    else:
+        merge_base = git("merge-base", prev_commit, os.environ['TRAVIS_COMMIT']).strip()
+        commit_range = "%s..%s" % (merge_base, os.environ['TRAVIS_COMMIT'])
+
     commits = git("log", "--pretty=%H", "-r", commit_range).strip()
     if not commits:
         return []
