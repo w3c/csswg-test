@@ -1,22 +1,37 @@
-# All mask properties test cases are meant to be failed
-# until bug 1251161 is fixed, which means enabling mask shorthand.
-# To enable it in compile time, refer to bug 1243734
+# For those test items with failure type fuzzy-if added, please refer to bug 1231643#c10.
 
 # mask-composite test cases
 == mask-composite-1a.html mask-composite-1-ref.html
 == mask-composite-1b.html mask-composite-1-ref.html
+== mask-composite-1c.html mask-composite-1-ref.html
 == mask-composite-2a.html mask-composite-2-ref.html
 == mask-composite-2b.html mask-composite-2-ref.html
+== mask-composite-2c.html mask-composite-2-ref.html
 
 # mask-mode test cases
 == mask-mode-a.html mask-mode-ref.html
 == mask-mode-b.html mask-mode-ref.html
+== mask-mode-to-mask-type.html mask-mode-to-mask-type-ref.html
 
 # mask-image test cases
 == mask-image-1a.html mask-image-1-ref.html
 == mask-image-1b.html mask-image-1-ref.html
 == mask-image-1c.html mask-image-1-ref.html
+== mask-image-1d.html mask-image-1-ref.html
 == mask-image-2.html mask-image-2-ref.html
+== mask-image-3a.html mask-image-3-ref.html
+== mask-image-3b.html mask-image-3-ref.html
+== mask-image-3c.html mask-image-3-ref.html
+== mask-image-3d.html mask-image-3-ref.html
+== mask-image-3e.html mask-image-3-ref.html
+== mask-image-3f.html mask-image-3-ref.html
+== mask-image-3g.html mask-image-3-ref.html
+== mask-image-3h.html mask-image-3-ref.html
+== mask-image-3i.html mask-image-3-ref.html
+== mask-image-4a.html blank.html
+== mask-image-4b.html blank.html
+== mask-image-5.html mask-image-5-ref.html
+== mask-image-6.html mask-image-6-ref.html
 
 # mask-clip test cases
 == mask-clip-1.html mask-clip-1-ref.html
@@ -65,3 +80,33 @@
 == mask-size-percent-length.html mask-size-percent-percent-ref.html
 == mask-size-percent-percent.html mask-size-percent-percent-ref.html
 == mask-size-percent-percent-stretch.html mask-size-percent-percent-stretch-ref.html
+
+
+== clip-path-contentBox-1a.html clip-path-geometryBox-1-ref.html
+== clip-path-contentBox-1b.html clip-path-geometryBox-1-ref.html
+== clip-path-contentBox-1c.html clip-path-geometryBox-1-ref.html
+== clip-path-paddingBox-1a.html clip-path-geometryBox-1-ref.html
+== clip-path-paddingBox-1b.html clip-path-geometryBox-1-ref.html
+== clip-path-paddingBox-1c.html clip-path-geometryBox-1-ref.html
+== clip-path-borderBox-1a.html clip-path-geometryBox-1-ref.html
+== clip-path-borderBox-1b.html clip-path-geometryBox-1-ref.html
+== clip-path-borderBox-1c.html clip-path-geometryBox-1-ref.html
+== clip-path-marginBox-1a.html clip-path-geometryBox-1-ref.html
+== clip-path-fillBox-1a.html clip-path-geometryBox-1-ref.html
+== clip-path-strokeBox-1a.html clip-path-geometryBox-1-ref.html
+== clip-path-strokeBox-1b.html clip-path-geometryBox-1-ref.html
+== clip-path-viewBox-1a.html clip-path-geometryBox-1-ref.html
+== clip-path-viewBox-1b.html clip-path-geometryBox-1-ref.html
+== clip-path-viewBox-1c.html clip-path-geometryBox-1-ref.html
+== clip-path-geometryBox-2.html clip-path-geometryBox-2-ref.html
+
+== clip-path-localRef-1.html clip-path-localRef-1-ref.html
+
+default-preferences
+
+# mask with opacity test cases
+== mask-opacity-1a.html mask-opacity-1-ref.html
+== mask-opacity-1b.html mask-opacity-1-ref.html
+== mask-opacity-1c.html mask-opacity-1-ref.html
+
+== clip-path-mix-blend-mode-1.html clip-path-mix-blend-mode-1-ref.html
