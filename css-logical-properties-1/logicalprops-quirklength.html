@@ -1,0 +1,168 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>CSS Logical Properties: {max-,min-}block-size</title>
+<link rel="author" title="Xu Xing" href="mailto:openxu@gmail.com">
+<link rel="help" href="https://drafts.csswg.org/css-logical-props-1/#logical-dimension-properties">
+<link rel="help" href="https://drafts.csswg.org/css-writing-modes-3/#logical-to-physical">
+<script src="/resources/testharness.js"></script>
+<script src="/resources/testharnessreport.js"></script>
+
+<style>
+.div_inlinesize {
+  border: 1px solid #0f0;
+}
+.div_blocksize {
+  border: 1px solid #f00;
+}
+
+#div_inlinesize1 {
+  inline-size: 100;
+}
+#ref_div_inlinesize1 {
+}
+#div_inlinesize2 {
+  inline-size: 100;
+  inline-size: 50px;
+}
+#ref_div_inlinesize2 {
+  width: 50px;
+}
+#div_inlinesize3 {
+  inline-size: 120px;
+  inline-size: 100;
+}
+#ref_div_inlinesize3 {
+  width: 120px;
+}
+#div_inlinesize4 {
+  inline-size: 80;
+  min-inline-size: 50px;
+  max-inline-size: 100px;
+}
+#ref_div_inlinesize4 {
+  min-width: 50px;
+  max-width: 100px;
+}
+
+#div_blocksize1 {
+  block-size: 100;
+}
+#ref_div_blocksize1 {
+}
+#div_blocksize2 {
+  block-size: 100;
+  block-size: 50px;
+}
+#ref_div_blocksize2 {
+  height: 50px;
+}
+#div_blocksize3 {
+  block-size: 120px;
+  block-size: 100;
+}
+#ref_div_blocksize3 {
+  height: 120px;
+}
+#div_blocksize4 {
+  block-size: 80;
+  min-block-size: 50px;
+  max-block-size: 100px;
+}
+#ref_div_blocksize4 {
+  min-height: 50px;
+  max-height: 100px;
+}
+
+.div_inlinesize_vlr {
+  border: 1px solid #0f0;
+  writing-mode: vertical-lr;
+}
+.div_blocksize_vlr {
+  border: 1px solid #f00;
+  writing-mode: vertical-lr;
+}
+
+#div_inlinesize_vlr1 {
+  inline-size: 100;
+}
+#ref_div_inlinesize_vlr1 {
+}
+#div_inlinesize_vlr2 {
+  inline-size: 100;
+  inline-size: 50px;
+}
+#ref_div_inlinesize_vlr2 {
+  height: 50px;
+}
+#div_inlinesize_vlr3 {
+  inline-size: 120px;
+  inline-size: 100;
+}
+#ref_div_inlinesize_vlr3 {
+  height: 120px;
+}
+#div_inlinesize_vlr4 {
+  inline-size: 80;
+  min-inline-size: 50px;
+  max-inline-size: 100px;
+}
+#ref_div_inlinesize_vlr4 {
+  min-height: 50px;
+  max-height: 100px;
+}
+
+#div_blocksize_vlr1 {
+  block-size: 100;
+}
+#ref_div_blocksize_vlr1 {
+}
+#div_blocksize_vlr2 {
+  block-size: 100;
+  block-size: 50px;
+}
+#ref_div_blocksize_vlr2 {
+  width: 50px;
+}
+#div_blocksize_vlr3 {
+  block-size: 120px;
+  block-size: 100;
+}
+#ref_div_blocksize_vlr3 {
+  width: 120px;
+}
+#div_blocksize_vlr4 {
+  block-size: 80;
+  min-block-size: 50px;
+  max-block-size: 100px;
+}
+#ref_div_blocksize_vlr4 {
+  min-width: 50px;
+  max-width: 100px;
+}
+</style>
+
+<script>
+test(function () {
+  var css_rules = document.styleSheets[0].cssRules;
+  var length = document.styleSheets[0].cssRules.length/2;
+  var style1, style2;
+  for (var i = 0; i < length; i = i + 2) {
+    style1 = css_rules[i].style;
+    style2 = css_rules[i+1].style;
+    assert_equals(style1.getPropertyValue('inline-size'), style2.getPropertyValue('width'));
+    assert_equals(style1.getPropertyValue('block-size'), style2.getPropertyValue('height'));
+  }
+}, "Check that {inline-,block-}size with quirky length");
+
+test(function () {
+  var css_rules = document.styleSheets[0].cssRules;
+  var length = document.styleSheets[0].cssRules.length;
+  var style1, style2;
+  for (var i = length/2; i < length; i = i + 2) {
+    style1 = css_rules[i].style;
+    style2 = css_rules[i+1].style;
+    assert_equals(style1.getPropertyValue('inline-size'), style2.getPropertyValue('height'));
+    assert_equals(style1.getPropertyValue('block-size'), style2.getPropertyValue('width'));
+  }
+}, "Check that {inline-,block-}size with quirky length in vertical-lr");
+</script>
