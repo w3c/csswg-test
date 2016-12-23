@@ -1,0 +1,64 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>CSS Logical Properties: {max-,min-}block-size</title>
+<link rel="author" title="Xu Xing" href="mailto:openxu@gmail.com">
+<link rel="help" href="https://drafts.csswg.org/css-logical-props-1/#logical-dimension-properties">
+<link rel="help" href="https://drafts.csswg.org/css-writing-modes-3/#logical-to-physical">
+<script src="/resources/testharness.js"></script>
+<script src="/resources/testharnessreport.js"></script>
+<script src="resources/style-check.js"></script>
+
+<style>
+div {
+  border: 1px solid #000;
+  writing-mode: vertical-lr;
+}
+#div1 {
+  block-size: 50;
+}
+#div2 {
+  block-size: 100;
+  block-size: 50px;
+}
+#div3 {
+  block-size: 120px;
+  block-size: 100;
+}
+#div4 {
+  block-size: 80;
+  min-block-size: 50px;
+  max-block-size: 100px;
+}
+#ref_div1 {
+  width: auto;
+}
+#ref_div2 {
+  width: 50px;
+}
+#ref_div3 {
+  width: 120px;
+}
+#ref_div4 {
+  width: auto;
+  min-width: 50px;
+  max-width: 100px;
+}
+</style>
+
+<div id="div1">This is a test.</div>
+<div id="div2">This is a test.</div>
+<div id="div3">This is a test.</div>
+<div id="div4">This is a test.</div>
+<div id="ref_div1">This is a test.</div>
+<div id="ref_div2">This is a test.</div>
+<div id="ref_div3">This is a test.</div>
+<div id="ref_div4">This is a test.</div>
+
+<script>
+test(function () {
+  assert_true(compareWidthHeight("div1", "ref_div1"));
+  assert_true(compareWidthHeight("div2", "ref_div2"));
+  assert_true(compareWidthHeight("div3", "ref_div3"));
+  assert_true(compareWidthHeight("div4", "ref_div4"));
+}, "Check that block-size with quirky length in vertical-lr");
+</script>
