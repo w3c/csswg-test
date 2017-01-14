@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shape Outside Circle Inline Style Arguments</title>
+        <link rel="author" title="Adobe" href="http://html.adobe.com/">
+        <link rel="author" title="Bear Travis" href="mailto:betravis@adobe.com">
+        <link rel="help" href="http://dev.w3.org/csswg/css-shapes/#ellipse">
+        <meta name="assert" content="An elliptical basic shape has 4 length or percentage arguments">
+        <meta name="flags" content="DOM">
+        <script src="/resources/testharness.js"></script>
+        <script src="/resources/testharnessreport.js"></script>
+        <script src="resources/parsing-utils.js"></script>
+    </head>
+    <body>
+        <div id="log"></div>
+        <script type="text/javascript">
+            generate_tests(test_inline_style, [
+                ["4 length arguments", "ellipse(1px, 2px, 3px, 4px)"],
+                ["4 percentage arguments", "ellipse(1%, 2%, 3%, 4%)"],
+                ["Too few arguments", "ellipse(1px, 2px, 3px)", null],
+                ["Too many arguments", "ellipse(1px, 2px, 3px, 4px, 5px)", null]
+            ]);
+        </script>
+    </body>
+</html>
