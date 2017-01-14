@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test polyline width svg background</title>
+    <link rel="author" title="aimyfly" href="mailto:aimyfly@126.com">
+    <link rel="help" href="http://www.w3.org/TR/compositing-1/">
+    <link rel="help" href="additional spec link">
+    <link rel="match" href="reference/ttwf-reftest-tutorial-starter-ref">
+    <meta name="assert" content="Test polyline width svg background">
+    <style type="text/css">
+        #testCon{ background:red; width:200px; height:200px; }
+		#poly{fill:blue;stroke:blue;stroke-width:1px;}
+		
+    </style>
+</head>
+<body>
+    <svg id="testCon"">
+  <polyline id="poly" points="40,60 80,55 80,10 110,50 160,50 130,80 160,130 100,110 60,180 75,90"/>
+</svg>
+</body>
+</html>
