@@ -15,6 +15,7 @@
         #test {
             position: relative;
             color: green;
+            visibility: hidden;
             width: 300px;
             font-family: Ahem;
             font-size: 20px;
@@ -39,10 +40,6 @@
     <script src="support/spec-example-utils.js"></script>
 </head>
 <body>
-    <p>
-        The test passes if the longest green horizontal bar is beneath the triangle and the
-        rest of them are to its right and none intersect it. There should be no red.
-    </p>
     <div id="test">
         <div id="shape-box"></div>
         <img src="support/rounded-triangle.svg">

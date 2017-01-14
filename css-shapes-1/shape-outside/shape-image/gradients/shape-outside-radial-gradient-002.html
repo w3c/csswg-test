@@ -17,15 +17,14 @@
                                 is applied."/>
     <style type="text/css">
         body { margin: 0; }
-        .container {
+        #test {
+            color: green;
+            visibility: hidden;
             width: 200px;
             height: 200px;
             font-family: Ahem;
             font-size: 10px;
             line-height: 1;
-        }
-        #test {
-            color: green;
         }
         #gradient {
             float: left;
@@ -37,10 +36,7 @@
     </style>
 </head>
 <body>
-    <p>
-        The test passes if you see green boxes following the contour of a circle. There should be no red.
-    </p>
-    <div id="test" class="container">
+    <div id="test">
         x</br>
         <div id="gradient"></div>
         <span id='test0'>x</span><br/>

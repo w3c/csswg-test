@@ -15,6 +15,7 @@
         #test {
             width: 400px;
             color: green;
+            visibility: hidden;
             font-family: Ahem;
             font-size: 20px;
             line-height: 2em;
@@ -34,10 +35,6 @@
     <script src="support/spec-example-utils.js"></script>
 </head>
 <body>
-    <p>
-        The test passes if the short green horizontal bars are the right of the shape,
-        the long green bar is beneath it, and no bars intersect it. There should be no red.
-    </p>
     <div id="test">
         <div id="box"></div>
         <span id="line-0">XXXXXX</span>

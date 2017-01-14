@@ -13,14 +13,13 @@
      <!-- This test is derived from Example 7 in this version of the spec:
           http://www.w3.org/TR/2014/WD-css-shapes-1-20140211/ -->
     <style type="text/css">
-        .container {
-          font-family: Ahem;
-          font-size: 20px;
-          line-height: 2em;
-        }
         #test {
             width: 400px;
             color: green;
+            visibility: hidden;
+            font-family: Ahem;
+            font-size: 20px;
+            line-height: 2em;
         }
         #image {
             float: left;
@@ -32,11 +31,6 @@
     <script src="support/spec-example-utils.js"></script>
 </head>
 <body>
-    <p>
-        The test passes if the short green horizontal bars are the right of the circle,
-        the long green bar is beneath the circle, and no bars intersect the circle. There
-        should be no red.
-    </p>
     <div id="test" class="container">
         <img id="image" src="support/circle-no-shadow.png"/>
         <span id="line-0">XXXXXX</span>
