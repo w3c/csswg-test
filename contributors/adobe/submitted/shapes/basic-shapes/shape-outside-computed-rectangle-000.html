@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shape Outside Rectangle Computed Style</title>
+        <link rel="author" title="Adobe" href="http://html.adobe.com/">
+        <link rel="author" title="Bear Travis" href="mailto:betravis@adobe.com">
+        <link rel="help" href="http://dev.w3.org/csswg/css-shapes/#rectangle">
+        <meta name="assert" content="If rx is not present, it defaults to 0. If ry is not present, it defaults to rx.">
+        <meta name="flags" content="DOM">
+        <script src="/resources/testharness.js"></script>
+        <script src="/resources/testharnessreport.js"></script>
+        <script src="resources/parsing-utils.js"></script>
+    </head>
+    <body>
+        <div id="log"></div>
+        <script type="text/javascript">
+            generate_tests(test_computed_style, [
+                ["rx, ry both missing", "rectangle(1px, 2px, 3px, 4px)", "rectangle(1px, 2px, 3px, 4px, 0px, 0px)"],
+                ["ry missing", "rectangle(1px, 2px, 3px, 4px, 5px)", "rectangle(1px, 2px, 3px, 4px, 5px, 5px)"]
+            ]);
+        </script>
+    </body>
+</html>

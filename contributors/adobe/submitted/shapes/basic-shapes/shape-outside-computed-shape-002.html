@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shape Outside Basic Shape Computed Relative to Box Sizing</title>
+        <link rel="author" title="Adobe" href="http://html.adobe.com/">
+        <link rel="author" title="Bear Travis" href="mailto:betravis@adobe.com">
+        <link rel="help" href="http://dev.w3.org/csswg/css-shapes/#basic-shapes-from-svg-syntax">
+        <meta name="assert" content="The basic shape can contain percentage lengths, which are resolved relative to the box-sizing property, which compute to the used length value">
+        <meta name="flags" content="DOM">
+        <script src="/resources/testharness.js"></script>
+        <script src="/resources/testharnessreport.js"></script>
+        <script src="resources/parsing-utils.js"></script>
+    </head>
+    <body>
+        <div id="log"></div>
+        <script type="text/javascript">
+            generate_tests(test_computed_style, [[
+                'box-sizing: border-box includes border',
+                'rectangle(10%, 20%, 30%, 40%, 50%, 60%)',
+                'circle(10px, 40px, 30px, 80px, 50px, 120px)',
+                {
+                    'width' : '50px',
+                    'height' : '100px',
+                    'box-sizing' : 'border-box',
+                    'border' : '50px solid transparent'
+                }], [
+                'box-sizing: border-box includes padding',
+                'rectangle(10%, 20%, 30%, 40%, 50%, 60%)',
+                'circle(10px, 40px, 30px, 80px, 50px, 120px)',
+                {
+                    'width' : '50px',
+                    'height' : '100px',
+                    'box-sizing' : 'border-box',
+                    'padding' : '25px'
+                }], [
+                'box-sizing: border-box includes border + padding',
+                'rectangle(10%, 20%, 30%, 40%, 50%, 60%)',
+                'circle(10px, 40px, 30px, 80px, 50px, 120px)',
+                {
+                    'width' : '50px',
+                    'height' : '100px',
+                    'box-sizing' : 'border-box',
+                    'border' : '25px solid transparent',
+                    'padding' : '25px'
+                }
+                ]]);
+        </script>
+    </body>
+</html>

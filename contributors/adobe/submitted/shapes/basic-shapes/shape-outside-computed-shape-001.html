@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shape Outside Percentages are Resolved in Computed Value</title>
+        <link rel="author" title="Adobe" href="http://html.adobe.com/">
+        <link rel="author" title="Bear Travis" href="mailto:betravis@adobe.com">
+        <link rel="help" href="http://dev.w3.org/csswg/css-shapes/#basic-shapes-from-svg-syntax">
+        <meta name="assert" content="The basic shape can contain percentage lengths, which compute to the used length value">
+        <meta name="flags" content="DOM">
+        <script src="/resources/testharness.js"></script>
+        <script src="/resources/testharnessreport.js"></script>
+        <script src="resources/parsing-utils.js"></script>
+    </head>
+    <body>
+        <div id="log"></div>
+        <script type="text/javascript">
+            generate_tests(test_computed_style, [
+                [
+                "Rectangle percentages resolved", "rectangle(10%, 20%, 30%, 40%, 50%, 60%)", "rectangle(10px, 40px, 30px, 80px, 50px, 120px)", { "width" : "100px", "height" : "200px" }
+                ],[
+                "Inset rectangle percentages are resolved", "inset-rectangle(10%, 20%, 30%, 40%, 50%, 60%)", "inset-rectangle(10px, 40px, 30px, 80px, 50px, 120px", { "width" : "100px", "height" : "200px" }
+                ],[
+                "Circle percentages are resolved", "circle(50%, 50%, 50%)", "circle(50px, 50px, 50px)", { "width" : "100px", "height" : "100px" }
+                ],[
+                "Ellipse percentages are resolved", "ellipse(10%, 20%, 30%, 40%)", "ellipse(10px, 40px, 30px, 80px", { "width" : "100px", "height" : "200px" }
+                ],[
+                "Polygon percentages are resolved", "polygon(10% 20%, 30% 40%, 50% 60%)", "polygon(10px 40px, 30px 80px, 50px 120px)"
+                ]
+            ]);
+        </script>
+    </body>
+</html>

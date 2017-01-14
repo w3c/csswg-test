@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shape Outside Circle Percentage Lengths</title>
+        <link rel="author" title="Adobe" href="http://html.adobe.com/">
+        <link rel="author" title="Bear Travis" href="mailto:betravis@adobe.com">
+        <link rel="help" href="http://dev.w3.org/csswg/css-shapes/#circle">
+        <meta name="assert" content="Computed circle has used lengths, where percentage r is resolved against sqrt((width ^ 2 + height ^ 2) / 2)">
+        <meta name="flags" content="DOM">
+        <script src="/resources/testharness.js"></script>
+        <script src="/resources/testharnessreport.js"></script>
+        <script src="resources/parsing-utils.js"></script>
+    </head>
+    <body>
+        <div id="log"></div>
+        <script type="text/javascript">
+            generate_tests(test_approx_computed_style, [
+                ['width == height', 'circle(50%, 50%, 50%)', 'circle(50px, 50px, 50px)', { 'width' : '100px', 'height' : '100px' } ],
+                ['height > width', 'circle(50%, 50%, 50%', 'circle(50px, 100px, 158.11388px)', { 'width' : '100px', 'height' : '200px'} ],
+                ['width auto', 'circle(50%, 50%, 50%)', 'circle(0px, 50px, 70.711px)', { 'width' : 'auto', 'display' : 'inline-block', 'height' : '100px' }],
+                ['height auto', 'circle(50%, 50%, 50%)', 'circle(50px, 0px, 70.711px)', { 'width' : '100px', 'height' : 'auto' }]
+            ]);
+        </script>
+    </body>
+</html>
