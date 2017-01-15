@@ -165,3 +165,7 @@ TRAILING WHITESPACE: vendor-imports/mozilla/mozilla-central-reftests/css21/pagin
 TRAILING WHITESPACE: vendor-imports/mozilla/mozilla-central-reftests/flexbox/flexbox-mbp-horiz-001-rtl-reverse.xhtml
 TRAILING WHITESPACE: vendor-imports/mozilla/mozilla-central-reftests/multicol3/moz-multicol3-column-balancing-break-inside-avoid-1.html
 TRAILING WHITESPACE: vendor-imports/mozilla/mozilla-central-reftests/multicol3/moz-multicol3-column-balancing-break-inside-avoid-1-ref.html
+TRAILING WHITESPACE:css-text-3/white-space/textarea-pre-wrap-011.html
+TRAILING WHITESPACE:css-text-3/white-space/textarea-pre-wrap-012.html
+TRAILING WHITESPACE:css-text-3/white-space/textarea-pre-wrap-013.html
+TRAILING WHITESPACE:css-text-3/white-space/textarea-pre-wrap-014.html
