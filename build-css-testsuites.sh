@@ -12,7 +12,7 @@ if [ ! -d $VENV ]; then
     if [ -z $PYTHON ]; then
         command -v python
         if [ $? -eq 0 ]; then
-            if [ `python -c 'import sys; print("%i" % (sys.hexversion<0x03000000))'` -eq 1 ]; then
+            if [ `python -c 'import sys; print(sys.version[0:3])'` == "2.7" ]; then
                 PYTHON=python
             fi
         fi
@@ -26,7 +26,7 @@ if [ ! -d $VENV ]; then
     fi
 
     if [ -z $PYTHON ]; then
-        echo "Please ensure Python 2 is installed"
+        echo "Please ensure Python 2.7 is installed"
         exit 1
     fi
 
@@ -34,7 +34,7 @@ if [ ! -d $VENV ]; then
 fi
 
 # Install dependencies
-$VENV/bin/pip install six==1.10.0 Template-Python==0.1.post1 html5lib==0.9999999 lxml==3.7.3 mercurial==4.1
+$VENV/bin/pip install -r requirements.txt
 
 # Fetch hg submodules if they're not there
 if [ ! -d tools/apiclient ]; then
