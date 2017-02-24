@@ -36,5 +36,14 @@ fi
 # Install dependencies
 $VENV/bin/pip install six==1.10.0 Template-Python==0.1.post1 html5lib==0.9999999 lxml==3.7.3 mercurial==4.1
 
+# Fetch hg submodules if they're not there
+if [ ! -d tools/apiclient ]; then
+    $VENV/bin/hg clone https://hg.csswg.org/dev/apiclient tools/apiclient
+fi
+
+if [ ! -d tools/w3ctestlib ]; then
+    $VENV/bin/hg clone https://hg.csswg.org/dev/w3ctestlib tools/w3ctestlib
+fi
+
 # Run the build script
 $VENV/bin/python tools/build.py "$@"
