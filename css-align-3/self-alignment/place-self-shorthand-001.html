@@ -8,8 +8,10 @@
 <script src="/css-align-3/resources/alignment-parsing-utils.js"></script>
 <div id="log"></div>
 <script>
-    var values = ["normal", "stretch"].concat(selfPositionValues, baselineValues);
+    var values = ["auto", "normal", "stretch"].concat(selfPositionValues, baselineValues);
     values.forEach(function(value) {
-        test(function() { checkPlaceSelf(value, "") }, "Checking place-self: " + value);
+        test(function() {
+            checkPlaceShorhandLonghands("place-self", "align-self", "justify-self", value);
+        }, "Checking place-self: " + value);
     });
 </script>

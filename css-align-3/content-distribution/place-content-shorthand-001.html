@@ -9,7 +9,9 @@
 <div id="log"></div>
 <script>
     var values = ["normal"].concat(contentPositionValues, distributionValues, baselineValues);
-        values.forEach(function(value) {
-        test(function() { checkPlaceContent(value, "") }, "Checking place-content: " + value);
+    values.forEach(function(value) {
+        test(function() {
+            checkPlaceShorhandLonghands("place-content", "align-content", "justify-content", value);
+        }, "Checking place-content: " + value);
     });
 </script>
