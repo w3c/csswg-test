@@ -16,20 +16,14 @@
 <script>
     var div = document.getElementById("test");
     div.setAttribute("style", "place-items: initial");
-    var style = getComputedStyle(div);
 
     test(function() {
-        assert_equals(style.getPropertyValue("place-items"),
-            "normal normal", "place-items resolved value");
-    }, "Check place-items: initial - resolved value");
-
-    test(function() {
-        assert_equals(style.getPropertyValue("align-items"),
-            "normal", "place-items specified value for align-items");
+        assert_equals(div.style["align-items"],
+            "initial", "place-items specified value for align-items");
     }, "Check place-items: initial - align-items resolved value");
 
     test(function() {
-        assert_equals(style.getPropertyValue("justify-items"),
-            "normal", "place-items specified value for justify-items");
+        assert_equals(div.style["justify-items"],
+            "initial", "place-items specified value for justify-items");
     }, "Check place-items: initial - justify-items resolved value");
 </script>

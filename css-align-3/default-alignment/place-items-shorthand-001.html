@@ -8,8 +8,13 @@
 <script src="/css-align-3/resources/alignment-parsing-utils.js"></script>
 <div id="log"></div>
 <script>
-    var values = ["normal"].concat(selfPositionValues, baselineValues);
-        values.forEach(function(value) {
-        test(function() { checkPlaceItems(value, "") }, "Checking place-items: " + value);
+    function checkValue(alignValue)
+    {
+        checkPlaceShorhandLonghands("place-items", "align-items", "justify-items", alignValue, "");
+    }
+
+    var values = ["normal", "stretch"].concat(selfPositionValues, baselineValues);
+    values.forEach(function(value) {
+        test(function() { checkValue(value) }, "Checking place-items: " + value);
     });
 </script>

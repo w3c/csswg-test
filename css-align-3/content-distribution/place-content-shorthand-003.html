@@ -19,17 +19,12 @@
     var style = getComputedStyle(div);
 
     test(function() {
-        assert_equals(style.getPropertyValue("place-content"),
-            "normal normal", "place-content resolved value");
-    }, "Check place-content: initial - resolved value");
-
-    test(function() {
-        assert_equals(style.getPropertyValue("align-content"),
-            "normal", "place-content specified value for align-content");
+        assert_equals(div.style["align-content"],
+            "initial", "place-content specified value for align-content");
     }, "Check place-content: initial - align-content resolved value");
 
     test(function() {
-        assert_equals(style.getPropertyValue("justify-content"),
-            "normal", "place-content specified value for justify-content");
+        assert_equals(div.style["justify-content"],
+            "initial", "place-content specified value for justify-content");
     }, "Check place-content: initial - justify-content resolved value");
 </script>
