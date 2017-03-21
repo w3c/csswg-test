@@ -136,7 +136,7 @@
                 tangent, 1, 0, 0,
                 0,       0, 1, 0,
                 0,       0, 0, 1])
-          var expected = skew.multiply(initialDOMMatrix());
+          var expected = initialDOMMatrix().multiply(skew);
           checkDOMMatrix(result, expected);
         },"test skewX()");
 
@@ -149,7 +149,7 @@
                 0, 1,       0, 0,
                 0, 0,       1, 0,
                 0, 0,       0, 1])
-          var expected = skew.multiply(initialDOMMatrix());
+          var expected = initialDOMMatrix().multiply(skew);
           checkDOMMatrix(result, expected);
         },"test skewY()");
 
