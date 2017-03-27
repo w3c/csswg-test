@@ -31,13 +31,13 @@
         var test = document.getElementById("test");
 
         test.style.animation = "outline-anim 3s 0s paused linear"
-	assert_equals(getComputedStyle(test).outlineStyle, 'solid');
+        assert_equals(getComputedStyle(test).outlineStyle, 'solid');
         test.style.animation = "outline-anim 3s -1s paused linear"
-	assert_equals(getComputedStyle(test).outlineStyle, 'solid');
+        assert_equals(getComputedStyle(test).outlineStyle, 'solid');
         test.style.animation = "outline-anim 3s -2s paused linear"
-	assert_equals(getComputedStyle(test).outlineStyle, 'dotted');
+        assert_equals(getComputedStyle(test).outlineStyle, 'dotted');
         test.style.animation = "outline-anim 3s 0s paused reverse-linear"
-	assert_equals(getComputedStyle(test).outlineStyle, 'dotted');
+        assert_equals(getComputedStyle(test).outlineStyle, 'dotted');
       }, "outline-style is animated as a discrete type");
 </script>
 </body>

@@ -10,7 +10,12 @@
 <style>
 span {
   outline: solid green 25px;
-  outline-offset: -35px;
+  outline-offset: -35px; /* Any value that makes sure the outlines collide ( < -25px )
+                            would make the test valid,
+                            -35px is just one such value that happens to make the failures pretty.
+                            I recommend looking at this test in as many UAs as possible,
+                            the results are quite astonishing.
+			  */
   color: red;
 }
 div {
