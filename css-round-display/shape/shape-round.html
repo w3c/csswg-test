@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Test: 'shape: round'</title>
+  <link rel="author" title="Jihye Hong" href="mailto:jh.hong@lge.com" />
+  <link rel="help" href="https://drafts.csswg.org/css-round-display/#shape-media-feature">
+  <meta name="viewport" content="width=device-width, initial-scale=0.66">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf8"/>
+  <link rel="stylesheet" media="screen and (shape: round)" href="round.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="current">
+      <div id="city">Seoul</div>
+      <div id="date">Fri 18 Nov, 2016</div>
+    </div>
+    <div id="info">
+      <img id = "weatherImg" src="img/partly_cloudy.png" alt="partlyCloudy">
+      <div id="temperature">11°C</div>
+      <div id="weather">Partly Cloudy</div>
+      <div id="values">
+        <div id="info1">
+          <img class="infoSvg" src="img/Umbrella.svg">
+          <span class="infoValue">Rain 0%</span>
+        </div>
+        <div id="info2">
+          <img class="infoSvg" src="img/Cloud-Rain-Alt.svg">
+          <span class="infoValue">Humidity 60%</span>
+        </div>
+        <div id="info3">
+          <img class="infoSvg" src="img/Wind.svg">
+          <span class="infoValue">Wind NNE</span>
+        </div>
+        <div id="info4">
+          <img class="infoSvg" src="img/Sun.svg">
+          <span class="infoValue">UV Level 0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p style="color: white">Test passes if the style for the round display is applied to this page.</p>
+</body>
+</html>
