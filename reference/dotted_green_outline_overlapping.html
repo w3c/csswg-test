@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+   <title>Reference rendering - dotted green outline overlapping text</title>
+   <link rel="author" title="Opera" href="https://www.opera.com/">
+   <style type="text/css">
+      html {
+         overflow: hidden;
+      }
+      #outline {
+         margin: -15px;
+         border: 15px dotted green;
+      }
+      #overlapped {
+         position: absolute;
+         z-index: -1;
+      }
+   </style>
+</head>
+<body>
+   <p>Test passes if there is a dotted outline that goes around the following
+   'Sample Text' and the "Filler Text" below is overlapped by the outline.</p>
+   <div id="outline">Sample Text</div>
+   <div id="overlapped">Filler Text</div>
+</body>
+</html>
