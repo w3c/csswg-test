@@ -12,13 +12,13 @@ import optparse
 import shutil
 from collections import defaultdict
 from apiclient import apiclient
-from w3ctestlib import Sources, Utils, Suite, Indexer
+from w3ctestlib import Sources, Utils, Suite, Indexer, SuperSuite
 from mercurial import ui
 
 
 
 class Builder(object):
-    def __init__(self, ui, outputPath, backupPath, ignorePaths, onlyCache):
+    def __init__(self, ui, outputPath, backupPath, ignorePaths, onlyCache, globalManifest, builtTests):
         self.reset(onlyCache)
         self.ui = ui
         self.skipDirs = ('support')
@@ -31,6 +31,8 @@ class Builder(object):
         self.ignorePaths = [path.rstrip('/') for path in ignorePaths] if (ignorePaths) else []
         self.workPath = 'build-temp'
         self.ignorePaths += (self.outputPath, self.backupPath, self.workPath)
+        self.globalManifest = globalManifest
+        self.builtTests = builtTests
 
     def reset(self, onlyCache):
         self.useCacheOnly = onlyCache
@@ -305,44 +307,54 @@ class Builder(object):
             if (not (self.sourceTree.isIgnoredDir(dir) or (dir in self.ignorePaths))):
                 self.gatherTests(dir)
 
+        if self.globalManifest:
+            self.ui.status("Building global manifest\n")
+            supersuite = SuperSuite.SuperSuite()
+            for testSuiteName in self.buildSuiteNames:
+                testSuite = self.testSuites[testSuiteName]
+                supersuite.suites.append(testSuite)
+            with open("testinfo.data", "wb") as repoManifest:
+                supersuite.buildIndex(repoManifest)
 
-        if (os.path.exists(self.workPath)):
-            self.ui.note("Clearing work path: ", self.workPath, "\n")
-            shutil.rmtree(self.workPath)
 
-        suiteData = self.getSuiteData()
-        flagData = self.getFlags()
-        templatePath = os.path.join('tools', 'templates')
-        for testSuiteName in self.buildSuiteNames:
-            testSuite = self.testSuites[testSuiteName]
-            self.ui.status("Building ", testSuiteName, "\n")
-            specSections = self.getSections(self.testSuiteData[testSuiteName]['specs'][0])
-            indexer = Indexer.Indexer(testSuite, specSections, suiteData, flagData, True,
-                                      templatePathList = [templatePath],
-                                      extraData = {'devel' : False, 'official' : True })
-            workPath = os.path.join(self.workPath, testSuiteName)
-            testSuite.buildInto(workPath, indexer)
+        if self.builtTests:
+            if (os.path.exists(self.workPath)):
+                self.ui.note("Clearing work path: ", self.workPath, "\n")
+                shutil.rmtree(self.workPath)
 
-        # move from work path to output path
-        for testSuiteName in self.buildSuiteNames:
-            workPath = os.path.join(self.workPath, testSuiteName)
-            outputPath = os.path.join(self.outputPath, testSuiteName)
-            backupPath = os.path.join(self.backupPath, testSuiteName) if (self.backupPath) else None
-            if (os.path.exists(workPath)):
-                if (os.path.exists(outputPath)):
-                    if (backupPath):
-                        if (os.path.exists(backupPath)):
-                            self.ui.note("Removing ", backupPath, "\n")
-                            shutil.rmtree(backupPath)       # delete old backup
-                        self.ui.note("Backing up ", outputPath, " to ", backupPath, "\n")
-                        shutil.move(outputPath, backupPath) # backup old output
-                    else:
-                        self.ui.note("Removing ", outputPath, "\n")
-                        shutil.rmtree(outputPath)           # no backups, delete old output
-                self.ui.note("Moving ", workPath, " to ", outputPath, "\n")
-                shutil.move(workPath, outputPath)
-        if (os.path.exists(self.workPath)):
-            shutil.rmtree(self.workPath)
+            suiteData = self.getSuiteData()
+            flagData = self.getFlags()
+            templatePath = os.path.join('tools', 'templates')
+            for testSuiteName in self.buildSuiteNames:
+                testSuite = self.testSuites[testSuiteName]
+                self.ui.status("Building ", testSuiteName, "\n")
+                specSections = self.getSections(self.testSuiteData[testSuiteName]['specs'][0])
+                indexer = Indexer.Indexer(testSuite, specSections, suiteData, flagData, True,
+                                          templatePathList = [templatePath],
+                                          extraData = {'devel' : False, 'official' : True })
+                workPath = os.path.join(self.workPath, testSuiteName)
+                testSuite.buildInto(workPath, indexer)
+
+            # move from work path to output path
+            for testSuiteName in self.buildSuiteNames:
+                workPath = os.path.join(self.workPath, testSuiteName)
+                outputPath = os.path.join(self.outputPath, testSuiteName)
+                backupPath = os.path.join(self.backupPath, testSuiteName) if (self.backupPath) else None
+                if (os.path.exists(workPath)):
+                    if (os.path.exists(outputPath)):
+                        if (backupPath):
+                            if (os.path.exists(backupPath)):
+                                self.ui.note("Removing ", backupPath, "\n")
+                                shutil.rmtree(backupPath)       # delete old backup
+                            self.ui.note("Backing up ", outputPath, " to ", backupPath, "\n")
+                            shutil.move(outputPath, backupPath) # backup old output
+                        else:
+                            self.ui.note("Removing ", outputPath, "\n")
+                            shutil.rmtree(outputPath)           # no backups, delete old output
+                    self.ui.note("Moving ", workPath, " to ", outputPath, "\n")
+                    shutil.move(workPath, outputPath)
+            if (os.path.exists(self.workPath)):
+                shutil.rmtree(self.workPath)
         return 0
 
 
@@ -368,6 +380,12 @@ if __name__ == "__main__":      # called from the command line
     parser.add_option("-c", "--cache",
                       action = "store_true", dest = "cache", default = False,
                       help = "use cached test suite and specification data only")
+    parser.add_option("--no-global-manifest",
+                      action = "store_false", dest = "global_manifest", default = True,
+                      help = "don't build a manifest file for all tests in the repo")
+    parser.add_option("--no-built-tests",
+                      action = "store_false", dest = "built_tests", default = True,
+                      help = "don't build the tests into test suites")
     (options, args) = parser.parse_args()
 
 
@@ -376,6 +394,6 @@ if __name__ == "__main__":      # called from the command line
     ui.setconfig('ui', 'quiet', str(options.quiet))
     ui.setconfig('ui', 'verbose', str(options.verbose))
 
-    builder = Builder(ui, options.output, options.backup, options.ignore, options.cache)
+    builder = Builder(ui, options.output, options.backup, options.ignore, options.cache, options.global_manifest, options.built_tests)
     result = builder.build(args)
     quit(result)
