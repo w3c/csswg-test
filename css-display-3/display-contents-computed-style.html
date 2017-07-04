@@ -3,22 +3,19 @@
 <title>CSS Display: Computed style for display:contents</title>
 <link rel="author" title="Rune Lillesveen" href="mailto:rune@opera.com">
 <link rel="help" href="https://drafts.csswg.org/css-display-3/#valdef-display-contents">
+<link rel="help" href="https://drafts.csswg.org/css-display-3/#transformations">
 <link rel="help" href="https://drafts.csswg.org/cssom-1/#resolved-values">
 <script src="/resources/testharness.js"></script>
 <script src="/resources/testharnessreport.js"></script>
 <style>
-    .contents { display: contents }
+    html, .contents { display: contents }
 
     #t2 .contents { background-color: green }
     #t2 span { background-color: inherit }
 
     #t3 .contents { color: green }
 
-    #t4 { display: flex; align-items: center }
-    #t4 .contents { align-items: baseline }
-    #t4 span { align-self: auto }
-
-    #t5 {
+    #t4 {
         width: auto;
         height: 50%;
         margin-left: 25%;
@@ -41,7 +38,7 @@
         <span></span>
     </div>
 </div>
-<div id="t5" class="contents"></div>
+<div id="t4" class="contents"></div>
 <script>
     test(function(){
         assert_equals(getComputedStyle(document.querySelector("#t1")).display, "contents");
@@ -56,14 +53,14 @@
     }, "display:contents element as inherit parent - implicit inheritance");
 
     test(function(){
-        assert_equals(getComputedStyle(document.querySelector("#t4 span")).alignSelf, "baseline");
-    }, "align-self:auto resolution for flex item inside display:contents");
-
-    test(function(){
-        var computed = getComputedStyle(document.querySelector("#t5"));
+        var computed = getComputedStyle(document.querySelector("#t4"));
         assert_equals(computed.width, "auto");
         assert_equals(computed.height, "50%");
         assert_equals(computed.marginLeft, "25%");
         assert_equals(computed.paddingTop, "10%");
     }, "Resolved value should be computed value, not used value, for display:contents");
+
+    test(function(){
+        assert_equals(getComputedStyle(document.documentElement).display, "block");
+    }, "display:contents is blockified for root elements");
 </script>

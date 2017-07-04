@@ -1,4 +1,5 @@
 sudo: false
+dist: trusty
 language: python
 python: 2.7
 
@@ -9,6 +10,9 @@ env:
 matrix:
   allow_failures:
     - env: SCRIPT=tools/travis/build.py
+
+before_install:
+  git fetch --unshallow
 
 script:
   - python $SCRIPT

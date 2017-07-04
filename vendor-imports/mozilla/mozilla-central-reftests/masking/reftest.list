@@ -11,6 +11,7 @@
 # mask-mode test cases
 == mask-mode-a.html mask-mode-ref.html
 == mask-mode-b.html mask-mode-ref.html
+== mask-mode-c.html mask-mode-ref.html
 == mask-mode-to-mask-type.html mask-mode-to-mask-type-ref.html
 
 # mask-image test cases
@@ -35,6 +36,7 @@
 
 # mask-clip test cases
 == mask-clip-1.html mask-clip-1-ref.html
+== mask-clip-2.html mask-clip-2-ref.html
 
 # mask-position test cases
 == mask-position-1a.html mask-position-1-ref.html
@@ -60,6 +62,7 @@
 # mask-origin test cases
 == mask-origin-1.html mask-origin-1-ref.html
 == mask-origin-2.html mask-origin-2-ref.html
+== mask-origin-3.html mask-origin-3-ref.html
 
 # mask-size test cases
 == mask-size-auto.html mask-size-auto-ref.html
@@ -108,5 +111,7 @@ default-preferences
 == mask-opacity-1a.html mask-opacity-1-ref.html
 == mask-opacity-1b.html mask-opacity-1-ref.html
 == mask-opacity-1c.html mask-opacity-1-ref.html
+== mask-opacity-1d.html mask-opacity-1-ref.html
+== mask-opacity-1e.html mask-opacity-1-ref.html
 
 == clip-path-mix-blend-mode-1.html clip-path-mix-blend-mode-1-ref.html
